@@ -1,21 +1,21 @@
 #!/usr/bin/env bash
 set -euo pipefail
-echo "[glondia] Installing and building Vite"
-if [ -f package-lock.json ]; then
+
+echo "=== Glondia ZIP source artifact build ==="
+echo "Project type: vite-source"
+echo "Framework: Vite"
+echo "Package manager: npm"
+echo "Publish directory: dist"
+echo "Source project detected (Vite, npm)"
+
+if [ -f package.json ]; then
+  echo "Installing dependencies with npm..."
   npm ci
+  echo "Running build: npm install; npm run build"
+  npm install; npm run build
 else
-  npm install
+  echo "ERROR: package.json expected but not found"
+  exit 1
 fi
-npm run build
-if [ ! -d "dist" ] && [ -f index.html ]; then
-  echo "[glondia] Build output dist missing. Preparing dist fallback."
-  rm -rf dist
-  mkdir -p dist
-  shopt -s dotglob
-  for item in *; do
-    if [ "$item" != "dist" ] && [ "$item" != "glondia-render-build.sh" ]; then
-      cp -R "$item" dist/
-    fi
-  done
-fi
-echo "[glondia] Build script complete"
+
+echo "=== Glondia build finished ==="
