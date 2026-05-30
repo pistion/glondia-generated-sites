@@ -11,8 +11,8 @@ echo "Source project detected (Vite, npm)"
 if [ -f package.json ]; then
   echo "Installing dependencies with npm..."
   npm ci
-  echo "Running build: npm insta; npm run build"
-  npm insta; npm run build
+  echo "Running build: npm run build"
+  npm run build
 else
   echo "ERROR: package.json expected but not found"
   exit 1
