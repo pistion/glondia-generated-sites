@@ -11,8 +11,8 @@ echo "Source project detected (Vite, npm)"
 if [ -f package.json ]; then
   echo "Installing dependencies with npm..."
   npm ci
-  echo "Running build: bash glondia-render-build.sh"
-  bash glondia-render-build.sh
+  echo "Running build: npm insta; npm run build"
+  npm insta; npm run build
 else
   echo "ERROR: package.json expected but not found"
   exit 1
