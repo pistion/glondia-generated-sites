@@ -1,0 +1,32 @@
+{
+  "uploadId": "zip_c3ubl9spv13a",
+  "fileName": "wedding-cars-exact.zip",
+  "siteName": "Wedding-cars",
+  "slug": "wedding-cars",
+  "sourceType": "zip-upload-extracted-source",
+  "storageMode": "database-artifact-record",
+  "extractedRoot": "/opt/render/project/src/.glondia-data/uploaded-sites/zip_c3ubl9spv13a",
+  "originalZipBytes": 31477,
+  "rawEntryCount": 9,
+  "deployableFileCount": 9,
+  "ignoredFileCount": 0,
+  "deployableFiles": [
+    "index.html",
+    "package-lock.json",
+    "package.json",
+    "postcss.config.js",
+    "src/App.jsx",
+    "src/index.css",
+    "src/main.jsx",
+    "tailwind.config.js",
+    "vite.config.js"
+  ],
+  "ignoredFiles": [],
+  "ignoredFolderExamples": [],
+  "projectType": "vite-source",
+  "framework": "Vite",
+  "packageManager": "npm",
+  "publishDirectory": "dist",
+  "shellFile": "glondia-render-build.sh",
+  "createdAt": "2026-05-31T13:40:44.230Z"
+}
