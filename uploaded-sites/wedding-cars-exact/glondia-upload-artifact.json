@@ -1,11 +1,11 @@
 {
-  "uploadId": "zip_0cnbm7no7i5p",
+  "uploadId": "zip_3bma8sjn5j7g",
   "fileName": "wedding-cars-exact.zip",
   "siteName": "wedding-cars-exact",
   "slug": "wedding-cars-exact",
   "sourceType": "zip-upload-extracted-source",
   "storageMode": "database-artifact-record",
-  "extractedRoot": "/opt/render/project/src/.glondia-data/uploaded-sites/zip_0cnbm7no7i5p",
+  "extractedRoot": "/opt/render/project/src/.glondia-data/uploaded-sites/zip_3bma8sjn5j7g",
   "originalZipBytes": 31477,
   "rawEntryCount": 9,
   "deployableFileCount": 9,
@@ -28,5 +28,5 @@
   "packageManager": "npm",
   "publishDirectory": "dist",
   "shellFile": "glondia-render-build.sh",
-  "createdAt": "2026-05-31T07:18:31.598Z"
+  "createdAt": "2026-05-31T07:44:59.260Z"
 }
