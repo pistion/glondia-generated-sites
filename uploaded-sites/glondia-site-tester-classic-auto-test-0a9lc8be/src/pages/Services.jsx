@@ -1,0 +1,177 @@
+import React from 'react';
+import { Link, useLocation } from 'react-router-dom';
+import { PageShell, CTAStrip } from '../components/Shared';
+
+const FULL_SERVICES = [
+  { icon: "fa-gauge-high", title: "Brakes / Suspension / Wheel Bearings",
+    desc: "Brake pad and rotor replacement, suspension overhauls and wheel-bearing service to keep stopping and steering tight." },
+  { icon: "fa-gears", title: "Engine Services",
+    desc: "Engine oil and filter changes, timing belts, head gaskets, and complete engine rebuilds for petrol and diesel vehicles." },
+  { icon: "fa-snowflake", title: "Airconditioning Services",
+    desc: "Full A/C diagnostics, regassing, compressor and condenser repairs to keep your cabin cool year-round." },
+  { icon: "fa-spray-can-sparkles", title: "Panel Repairs & Spray Painting",
+    desc: "Crash and dent repair, panel beating and full or spot resprays in our enclosed booth for a factory finish." },
+  { icon: "fa-bolt", title: "Auto Electrical",
+    desc: "Batteries, alternators, starters, wiring faults, lighting and aftermarket electrical installation." },
+  { icon: "fa-clipboard-check", title: "Vehicle Inspections",
+    desc: "Pre-purchase, pre-trip and roadworthy inspections with a full written report and a recommended next-step plan." },
+  { icon: "fa-magnifying-glass-chart", title: "Vehicle Diagnostic Scanning",
+    desc: "Computer scanning of engine, transmission, ABS and body systems to pinpoint warning lights and intermittent faults." },
+  { icon: "fa-truck-pickup", title: "Toyota & Nissan Specialists",
+    desc: "Our techs specialise in Toyota and Nissan SUVs and sedans — common in PNG and built to last with the right care." },
+];
+
+const SPECIALS = [
+  {
+    head: "Engine, Battery & Lights",
+    price: "K460",
+    items: [
+      "Change engine oil & filter",
+      "Coolant top up",
+      "Brake fluid top up",
+      "Windshield wiper fluid top up",
+      "Air filter replacement",
+      "Cabin filter replacement",
+      "Inspect battery",
+      "Inspect spark plugs",
+      "Inspect hoses & pumps",
+      "Check lights — replace bulbs",
+    ],
+  },
+  {
+    head: "Brake & Tire",
+    price: "K221",
+    items: [
+      "Inspect brake rotor",
+      "Inspect rear brake pads & discs",
+      "Replace front brake pads",
+      "Check tires / tread condition",
+      "Inspect fasteners, wheel nuts & studs",
+    ],
+  },
+  {
+    head: "Steering, Suspension & Transmission",
+    price: "K99",
+    items: [
+      "Inspect shock absorbers / suspension & steering rack",
+      "Inspect transmission",
+      "Inspect drive shaft / axle",
+      "Inspect exhaust",
+    ],
+  },
+];
+
+const PROCESS = [
+  { n: "01", icon: "fa-phone", title: "Book Your Slot", desc: "Call, WhatsApp or email us with your vehicle and the issue. We'll lock in a time that works." },
+  { n: "02", icon: "fa-car-side", title: "Drop Off", desc: "Drop your vehicle at our Korobosea Drive workshop. Loan car arrangements available on request." },
+  { n: "03", icon: "fa-clipboard-list", title: "Inspect & Quote", desc: "We inspect, then send you a clear written quotation before any work begins. No surprises." },
+  { n: "04", icon: "fa-key", title: "Pick Up", desc: "Most jobs are completed the same day. We'll call you the moment your car is ready." },
+];
+
+const Services = () => {
+  const { hash } = useLocation();
+
+  React.useEffect(() => {
+    if (hash) {
+      const el = document.querySelector(hash);
+      if (el) el.scrollIntoView({ behavior: 'smooth' });
+    }
+  }, [hash]);
+
+  return (
+    <PageShell active="services" title="Services — Classic Auto Services Ltd">
+      <section className="page-head">
+        <h1>Our Services</h1>
+        <p>Comprehensive automotive care delivered by certified technicians using quality parts.</p>
+        <div className="crumbs">
+          <Link to="/">Home</Link> <i className="fa-solid fa-chevron-right"></i> <span>Services</span>
+        </div>
+      </section>
+
+      {/* FULL LIST */}
+      <section>
+        <div className="container">
+          <div className="section-head reveal">
+            <span className="eyebrow">Full Service Menu</span>
+            <h2>What We Do</h2>
+            <p>From a quick oil change to a full mechanical rebuild, our team is equipped to handle it.</p>
+          </div>
+          <div className="svc-list">
+            {FULL_SERVICES.map((s, i) => (
+              <div className={`svc-row reveal delay-${(i % 4) + 1}`} key={s.title}>
+                <div className="num">{String(i+1).padStart(2,"0")}</div>
+                <div>
+                  <h4>{s.title}</h4>
+                  <p>{s.desc}</p>
+                </div>
+                <div className="ic"><i className={`fa-solid ${s.icon}`}></i></div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* SPECIALS */}
+      <section id="specials" className="bg-paper">
+        <div className="container">
+          <div className="section-head reveal">
+            <span className="eyebrow">Monthly Specials</span>
+            <h2>Car Preventative Maintenance</h2>
+            <p>Three packages designed to keep your Toyota or Nissan SUV or sedan in top condition.</p>
+          </div>
+          <div className="specials-grid">
+            {SPECIALS.map((sp, i) => (
+              <div className={`special reveal delay-${i+1}`} key={sp.head}>
+                <div className="head">{sp.head}</div>
+                <div className="price">{sp.price}<small>per service</small></div>
+                <ul>
+                  {sp.items.map(it => <li key={it}>{it}</li>)}
+                </ul>
+                <div className="foot">
+                  <Link to="/contact" className="btn btn-primary"><i className="fa-solid fa-calendar-check"></i> Book Now</Link>
+                </div>
+              </div>
+            ))}
+          </div>
+          <div className="reveal" style={{maxWidth: 920, margin: "40px auto 0", textAlign: "left", background: "#fff", border: "1px solid var(--line)", borderRadius: 14, padding: "22px 26px", boxShadow: "var(--shadow-sm)"}}>
+            <strong style={{display: "block", color: "var(--navy-800)", letterSpacing: 2, textTransform: "uppercase", marginBottom: 10}}><i className="fa-solid fa-circle-info" style={{color: "var(--blue-500)", marginRight: 8}}></i> Terms &amp; Conditions</strong>
+            <ul style={{listStyle: "disc", paddingLeft: 20, fontSize: 15, color: "#3a4470", lineHeight: 1.8}}>
+              <li>Toyota &amp; Nissan SUVs and sedans only.</li>
+              <li>Appointments require payment to be sorted before running the maintenance or inspection.</li>
+              <li>Quotations are issued upon defects found under categorised services after inspections.</li>
+              <li>Parts and labour fees included. Final pricing may vary depending on the vehicle's make and model.</li>
+              <li>Inspections run 30–45 minutes; full services ~½ a day. Customers required to drop off and pick up their cars.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      {/* PROCESS */}
+      <section className="bg-navy">
+        <div className="container">
+          <div className="section-head reveal">
+            <span className="eyebrow">How It Works</span>
+            <h2>From Booking To Pick-Up</h2>
+            <p>A simple, transparent process built around your time.</p>
+          </div>
+          <div className="value-grid">
+            {PROCESS.map((p, i) => (
+              <div className={`value reveal delay-${i+1}`} key={p.n} style={{textAlign: "left"}}>
+                <div style={{display: "flex", alignItems: "center", gap: 14, marginBottom: 12}}>
+                  <span style={{fontSize: 36, fontWeight: 700, color: "var(--blue-300)"}}>{p.n}</span>
+                  <i className={`fa-solid ${p.icon}`} style={{marginBottom: 0, fontSize: 24}}></i>
+                </div>
+                <h4 style={{textAlign: "left"}}>{p.title}</h4>
+                <p style={{textAlign: "left"}}>{p.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <CTAStrip />
+    </PageShell>
+  );
+};
+
+export default Services;
