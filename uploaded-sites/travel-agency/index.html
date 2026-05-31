@@ -1,0 +1,962 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webstore Builder Discovery Questionnaire</title>
+    <!-- Modern Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-gradient: linear-gradient(135deg, #6366f1 0%, #a855f7 100%);
+            --primary: #6366f1;
+            --primary-dark: #4f46e5;
+            --secondary: #a855f7;
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --border-color: #e2e8f0;
+            --input-focus: #e0e7ff;
+            --radius-lg: 16px;
+            --radius-md: 12px;
+            --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+            --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+            --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        /* Progress Bar */
+        .progress-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: #e2e8f0;
+            z-index: 1000;
+        }
+
+        .progress-bar {
+            height: 100%;
+            background: var(--primary-gradient);
+            width: 0%;
+            transition: width 0.2s ease;
+        }
+
+        header {
+            background: var(--primary-gradient);
+            color: white;
+            padding: 4rem 1rem;
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            letter-spacing: -0.025em;
+        }
+
+        header p {
+            font-size: 1.125rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem 5rem;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+
+        @media (min-width: 1024px) {
+            .container {
+                grid-template-columns: 300px 1fr;
+            }
+        }
+
+        /* Sidebar Navigation */
+        .sidebar {
+            position: sticky;
+            top: 2rem;
+            height: fit-content;
+            display: none;
+        }
+
+        @media (min-width: 1024px) {
+            .sidebar {
+                display: block;
+            }
+        }
+
+        .nav-card {
+            background: var(--card-bg);
+            border-radius: var(--radius-lg);
+            padding: 1.5rem;
+            box-shadow: var(--shadow-md);
+            border: 1px solid var(--border-color);
+        }
+
+        .nav-card h2 {
+            font-size: 0.875rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--text-muted);
+            margin-bottom: 1rem;
+        }
+
+        .nav-list {
+            list-style: none;
+        }
+
+        .nav-item a {
+            display: block;
+            padding: 0.625rem 1rem;
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.9375rem;
+            border-radius: var(--radius-md);
+            transition: all 0.2s ease;
+            margin-bottom: 0.25rem;
+        }
+
+        .nav-item a:hover {
+            background: #f1f5f9;
+            color: var(--primary);
+        }
+
+        .nav-item a.active {
+            background: #eef2ff;
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        /* Form Sections */
+        .form-content {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: var(--radius-lg);
+            padding: 2rem;
+            box-shadow: var(--shadow-md);
+            border: 1px solid var(--border-color);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .card:hover {
+            box-shadow: var(--shadow-lg);
+        }
+
+        .card-header {
+            margin-bottom: 1.5rem;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 1rem;
+        }
+
+        .card-header h2 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text-main);
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .card-header p {
+            color: var(--text-muted);
+            font-size: 0.9375rem;
+            margin-top: 0.25rem;
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+        }
+
+        @media (min-width: 640px) {
+            .form-grid.two-cols {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .form-group.full-width {
+            grid-column: 1 / -1;
+        }
+
+        label {
+            font-weight: 600;
+            font-size: 0.875rem;
+            color: var(--text-main);
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="url"],
+        input[type="date"],
+        select,
+        textarea {
+            padding: 0.75rem 1rem;
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-md);
+            font-family: inherit;
+            font-size: 1rem;
+            transition: border-color 0.2s, box-shadow 0.2s;
+            background-color: #ffffff;
+        }
+
+        input:focus,
+        select:focus,
+        textarea:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px var(--input-focus);
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        .helper-text {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            margin-top: 0.25rem;
+        }
+
+        /* Checkbox & Radio Styles */
+        .options-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 0.75rem;
+        }
+
+        .option-item {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 0.75rem;
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-md);
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .option-item:hover {
+            background: #f8fafc;
+            border-color: var(--primary);
+        }
+
+        .option-item input {
+            width: 1.125rem;
+            height: 1.125rem;
+            accent-color: var(--primary);
+        }
+
+        .option-item span {
+            font-size: 0.9375rem;
+        }
+
+        /* File Upload Styling */
+        .file-upload-wrapper {
+            border: 2px dashed var(--border-color);
+            padding: 1.5rem;
+            border-radius: var(--radius-md);
+            text-align: center;
+            background: #f8fafc;
+            transition: all 0.2s;
+            position: relative;
+        }
+
+        .file-upload-wrapper:hover {
+            border-color: var(--primary);
+            background: #f5f3ff;
+        }
+
+        .file-upload-wrapper input[type="file"] {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            cursor: pointer;
+        }
+
+        .file-upload-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--text-muted);
+        }
+
+        .file-upload-content i {
+            font-size: 2rem;
+            color: var(--primary);
+        }
+
+        .file-preview {
+            margin-top: 1rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+            gap: 0.5rem;
+        }
+
+        .preview-item {
+            position: relative;
+            aspect-ratio: 1;
+            border-radius: 4px;
+            overflow: hidden;
+            border: 1px solid var(--border-color);
+            background: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.625rem;
+            text-align: center;
+            padding: 2px;
+        }
+
+        .preview-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Buttons */
+        .btn-group {
+            display: flex;
+            gap: 1rem;
+            margin-top: 2rem;
+            padding: 2rem;
+            background: white;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-md);
+        }
+
+        .btn {
+            padding: 0.875rem 2rem;
+            border-radius: var(--radius-md);
+            font-weight: 700;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.2s;
+            border: none;
+            flex: 1;
+        }
+
+        .btn-primary {
+            background: var(--primary-gradient);
+            color: white;
+            box-shadow: 0 4px 6px -1px rgba(99, 102, 241, 0.4);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 15px -3px rgba(99, 102, 241, 0.4);
+        }
+
+        .btn-secondary {
+            background: #f1f5f9;
+            color: var(--text-main);
+        }
+
+        .btn-secondary:hover {
+            background: #e2e8f0;
+        }
+
+        /* Scroll to Top */
+        .scroll-top {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            width: 3rem;
+            height: 3rem;
+            background: var(--primary-gradient);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: var(--shadow-lg);
+            opacity: 0;
+            transition: opacity 0.3s;
+            z-index: 100;
+            border: none;
+        }
+
+        .scroll-top.visible {
+            opacity: 1;
+        }
+
+        footer {
+            text-align: center;
+            padding: 3rem 1rem;
+            color: var(--text-muted);
+            font-size: 0.875rem;
+        }
+
+        /* Required asterisk */
+        .required::after {
+            content: " *";
+            color: #ef4444;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="progress-container">
+        <div class="progress-bar" id="progressBar"></div>
+    </div>
+
+    <header>
+        <h1>Webstore Builder Discovery</h1>
+        <p>Start your e-commerce journey by telling us about your business goals and product vision.</p>
+    </header>
+
+    <main class="container">
+        <!-- Sticky Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="nav-card">
+                <h2>Sections</h2>
+                <ul class="nav-list" id="sidebarNav">
+                    <li class="nav-item"><a href="#section1">1. Client & Business Info</a></li>
+                    <li class="nav-item"><a href="#section2">2. Store Overview</a></li>
+                    <li class="nav-item"><a href="#section3">3. Design & Branding</a></li>
+                    <li class="nav-item"><a href="#section4">4. Product Management</a></li>
+                    <li class="nav-item"><a href="#section5">5. Payments & Checkout</a></li>
+                    <li class="nav-item"><a href="#section6">6. Shipping & Fulfillment</a></li>
+                    <li class="nav-item"><a href="#section7">7. Marketing & Engagement</a></li>
+                    <li class="nav-item"><a href="#section8">8. Technical & Legal</a></li>
+                    <li class="nav-item"><a href="#section9">9. Timeline & Budget</a></li>
+                    <li class="nav-item"><a href="#section10">10. Vision</a></li>
+                </ul>
+            </div>
+        </aside>
+
+        <!-- Form Content -->
+        <div class="form-content">
+            <form id="mainForm" action="/submit" method="POST" enctype="multipart/form-data">
+                
+                <!-- 1. Client & Business Information -->
+                <section id="section1" class="card">
+                    <div class="card-header">
+                        <h2>Client & Business Information</h2>
+                        <p>Basic details about you and your brand.</p>
+                    </div>
+                    <div class="form-grid two-cols">
+                        <div class="form-group">
+                            <label for="full_name" class="required">Full Name</label>
+                            <input type="text" id="full_name" name="full_name" required placeholder="Jane Smith">
+                        </div>
+                        <div class="form-group">
+                            <label for="business_name" class="required">Business Name</label>
+                            <input type="text" id="business_name" name="business_name" required placeholder="Luxe Goods Co.">
+                        </div>
+                        <div class="form-group">
+                            <label for="email" class="required">Email Address</label>
+                            <input type="email" id="email" name="email" required placeholder="jane@example.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="phone" class="required">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" required placeholder="+1 (555) 123-4567">
+                        </div>
+                        <div class="form-group">
+                            <label for="industry">Industry / Niche</label>
+                            <input type="text" id="industry" name="industry" placeholder="e.g., Fashion, Tech, Home Decor">
+                        </div>
+                        <div class="form-group">
+                            <label for="contact_method">Preferred Contact Method</label>
+                            <select id="contact_method" name="contact_method">
+                                <option value="email">Email</option>
+                                <option value="phone">Phone</option>
+                                <option value="whatsapp">WhatsApp</option>
+                            </select>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 2. Store Overview -->
+                <section id="section2" class="card">
+                    <div class="card-header">
+                        <h2>Store Overview</h2>
+                        <p>Tell us what you're selling and who you're selling to.</p>
+                    </div>
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label>Product Types</label>
+                            <div class="options-grid">
+                                <label class="option-item"><input type="checkbox" name="product_types" value="physical"> <span>Physical Goods</span></label>
+                                <label class="option-item"><input type="checkbox" name="product_types" value="digital"> <span>Digital Downloads</span></label>
+                                <label class="option-item"><input type="checkbox" name="product_types" value="services"> <span>Services/Bookings</span></label>
+                                <label class="option-item"><input type="checkbox" name="product_types" value="subscriptions"> <span>Subscriptions</span></label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="product_count">Estimated Number of Products</label>
+                            <select id="product_count" name="product_count">
+                                <option value="1-10">1 - 10</option>
+                                <option value="11-50">11 - 50</option>
+                                <option value="51-200">51 - 200</option>
+                                <option value="200+">200+</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="usp">Unique Selling Point (USP)</label>
+                            <textarea id="usp" name="usp" placeholder="What makes your store unique?"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="target_audience">Target Audience</label>
+                            <textarea id="target_audience" name="target_audience" placeholder="Describe your ideal customer..."></textarea>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 3. Design & Branding -->
+                <section id="section3" class="card">
+                    <div class="card-header">
+                        <h2>Design & Branding</h2>
+                        <p>Help us visualize your online storefront.</p>
+                    </div>
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="logo_status">Logo Status</label>
+                            <select id="logo_status" name="logo_status">
+                                <option value="existing">I have a logo</option>
+                                <option value="new">I need a new logo</option>
+                                <option value="refresh">I need a logo refresh</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="brand_colors">Brand Colors / Style</label>
+                            <input type="text" id="brand_colors" name="brand_colors" placeholder="Hex codes or general vibe">
+                        </div>
+                        <div class="form-group">
+                            <label for="tone_style">Tone of Voice</label>
+                            <input type="text" id="tone_style" name="tone_style" placeholder="Modern, Professional, Playful, Luxury">
+                        </div>
+                        <div class="form-group">
+                            <label for="inspiration_sites">Inspiration Webstores</label>
+                            <textarea id="inspiration_sites" name="inspiration_sites" placeholder="Links to stores you admire..."></textarea>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Upload Brand Assets</label>
+                            <div class="file-upload-wrapper">
+                                <input type="file" name="brand_files[]" multiple accept="image/*,.pdf,.zip">
+                                <div class="file-upload-content">
+                                    <i>📁</i>
+                                    <p>Click to upload logos, fonts, or style guides</p>
+                                    <span class="helper-text">Multiple files allowed. PNG, JPG, PDF.</span>
+                                </div>
+                            </div>
+                            <div class="file-preview"></div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 4. Product Management -->
+                <section id="section4" class="card">
+                    <div class="card-header">
+                        <h2>Product Management</h2>
+                        <p>How do you plan to manage your inventory?</p>
+                    </div>
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="inventory_tracking">Inventory Tracking Needs</label>
+                            <select id="inventory_tracking" name="inventory_tracking">
+                                <option value="basic">Basic (Track stock levels)</option>
+                                <option value="advanced">Advanced (Multi-location, Low stock alerts)</option>
+                                <option value="none">None (Made to order / Services)</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="product_variations">Do products have variations?</label>
+                            <input type="text" id="product_variations" name="product_variations" placeholder="e.g., Sizes, Colors, Materials">
+                        </div>
+                        <div class="form-group">
+                            <label for="digital_downloads">Digital Downloads Logic (if applicable)</label>
+                            <textarea id="digital_downloads" name="digital_downloads" placeholder="How should digital goods be delivered?"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="csv_import">Need to import products from CSV?</label>
+                            <select id="csv_import" name="csv_import">
+                                <option value="no">No</option>
+                                <option value="yes">Yes (Existing list)</option>
+                                <option value="migration">Yes (From another platform)</option>
+                            </select>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 5. Payments & Checkout -->
+                <section id="section5" class="card">
+                    <div class="card-header">
+                        <h2>Payments & Checkout</h2>
+                        <p>Ensuring a smooth transaction for your customers.</p>
+                    </div>
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label>Preferred Payment Gateways</label>
+                            <div class="options-grid">
+                                <label class="option-item"><input type="checkbox" name="payment_gateways" value="stripe"> <span>Stripe</span></label>
+                                <label class="option-item"><input type="checkbox" name="payment_gateways" value="paypal"> <span>PayPal</span></label>
+                                <label class="option-item"><input type="checkbox" name="payment_gateways" value="apple_google"> <span>Apple/Google Pay</span></label>
+                                <label class="option-item"><input type="checkbox" name="payment_gateways" value="crypto"> <span>Crypto</span></label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="currencies">Currencies Needed</label>
+                            <input type="text" id="currencies" name="currencies" placeholder="USD, EUR, GBP, etc.">
+                        </div>
+                        <div class="form-group">
+                            <label for="tax_requirements">Tax Requirements</label>
+                            <textarea id="tax_requirements" name="tax_requirements" placeholder="VAT, Sales Tax, Automated calculation?"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="guest_checkout">Guest Checkout Policy</label>
+                            <select id="guest_checkout" name="guest_checkout">
+                                <option value="allow">Allow Guest Checkout</option>
+                                <option value="require">Require Account</option>
+                                <option value="optional">Optional Account Creation</option>
+                            </select>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 6. Shipping & Fulfillment -->
+                <section id="section6" class="card">
+                    <div class="card-header">
+                        <h2>Shipping & Fulfillment</h2>
+                        <p>Getting your products to your customers.</p>
+                    </div>
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label>Shipping Methods</label>
+                            <div class="options-grid">
+                                <label class="option-item"><input type="checkbox" name="shipping_methods" value="flat"> <span>Flat Rate</span></label>
+                                <label class="option-item"><input type="checkbox" name="shipping_methods" value="weight"> <span>Weight-Based</span></label>
+                                <label class="option-item"><input type="checkbox" name="shipping_methods" value="realtime"> <span>Real-time Carrier Rates</span></label>
+                                <label class="option-item"><input type="checkbox" name="shipping_methods" value="free"> <span>Free Shipping Thresholds</span></label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="international_shipping">International Shipping?</label>
+                            <select id="international_shipping" name="international_shipping">
+                                <option value="no">Domestic Only</option>
+                                <option value="yes">Worldwide</option>
+                                <option value="select">Selected Regions Only</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="local_pickup">Local Pickup / Delivery?</label>
+                            <input type="text" id="local_pickup" name="local_pickup" placeholder="Do you offer local pickup?">
+                        </div>
+                        <div class="form-group">
+                            <label for="fulfillment_process">Fulfillment Process</label>
+                            <textarea id="fulfillment_process" name="fulfillment_process" placeholder="How will you handle packaging and shipping?"></textarea>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 7. Marketing & Engagement -->
+                <section id="section7" class="card">
+                    <div class="card-header">
+                        <h2>Marketing & Engagement</h2>
+                        <p>Tools to grow your sales.</p>
+                    </div>
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="newsletter_integration">Newsletter Integration</label>
+                            <input type="text" id="newsletter_integration" name="newsletter_integration" placeholder="Mailchimp, Klaviyo, Omnisend">
+                        </div>
+                        <div class="form-group">
+                            <label for="coupon_codes">Coupon / Discount Strategy</label>
+                            <textarea id="coupon_codes" name="coupon_codes" placeholder="Periodic sales, referral codes, etc."></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="product_reviews">Product Reviews / Ratings</label>
+                            <select id="product_reviews" name="product_reviews">
+                                <option value="yes">Enable Reviews</option>
+                                <option value="verified">Verified Buyers Only</option>
+                                <option value="no">Disable Reviews</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="social_links">Social Media Handles</label>
+                            <input type="text" id="social_links" name="social_links" placeholder="Instagram, TikTok, Facebook links">
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 8. Technical & Legal -->
+                <section id="section8" class="card">
+                    <div class="card-header">
+                        <h2>Technical & Legal</h2>
+                        <p>Compliance and infrastructure.</p>
+                    </div>
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="domain_status">Domain Status</label>
+                            <select id="domain_status" name="domain_status">
+                                <option value="none">I need a domain</option>
+                                <option value="owned">I already own a domain</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="hosting_pref">Preferred E-commerce Platform</label>
+                            <input type="text" id="hosting_pref" name="hosting_pref" placeholder="Shopify, WooCommerce, Custom, etc.">
+                        </div>
+                        <div class="form-group">
+                            <label>Required Legal Policies</label>
+                            <div class="options-grid">
+                                <label class="option-item"><input type="checkbox" name="legal_policies" value="privacy"> <span>Privacy Policy</span></label>
+                                <label class="option-item"><input type="checkbox" name="legal_policies" value="terms"> <span>Terms of Service</span></label>
+                                <label class="option-item"><input type="checkbox" name="legal_policies" value="refund"> <span>Refund/Return Policy</span></label>
+                                <label class="option-item"><input type="checkbox" name="legal_policies" value="shipping"> <span>Shipping Policy</span></label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="compliance_reqs">Compliance Requirements</label>
+                            <textarea id="compliance_reqs" name="compliance_reqs" placeholder="GDPR, ADA, Industry-specific rules..."></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label>Upload Existing Legal Docs</label>
+                            <div class="file-upload-wrapper">
+                                <input type="file" name="legal_docs[]" multiple accept=".pdf,.doc,.docx">
+                                <div class="file-upload-content">
+                                    <i>⚖️</i>
+                                    <p>Click to upload current policies or legal docs</p>
+                                    <span class="helper-text">PDF, DOC, DOCX.</span>
+                                </div>
+                            </div>
+                            <div class="file-preview"></div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 9. Timeline & Budget -->
+                <section id="section9" class="card">
+                    <div class="card-header">
+                        <h2>Timeline & Budget</h2>
+                        <p>Planning for your launch.</p>
+                    </div>
+                    <div class="form-grid two-cols">
+                        <div class="form-group">
+                            <label for="launch_date">Desired Launch Date</label>
+                            <input type="date" id="launch_date" name="launch_date">
+                        </div>
+                        <div class="form-group">
+                            <label for="budget_range">Budget Range</label>
+                            <select id="budget_range" name="budget_range">
+                                <option value="basic">$1k - $3k</option>
+                                <option value="standard">$3k - $10k</option>
+                                <option value="premium">$10k - $25k+</option>
+                            </select>
+                        </div>
+                        <div class="form-group full-width">
+                            <label for="maintenance_needs">Ongoing Maintenance Needs</label>
+                            <textarea id="maintenance_needs" name="maintenance_needs" placeholder="Security, content updates, marketing support..."></textarea>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 10. Vision -->
+                <section id="section10" class="card">
+                    <div class="card-header">
+                        <h2>Your Vision</h2>
+                        <p>The big picture of your webstore.</p>
+                    </div>
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="vision_desc" class="required">Describe the ideal customer journey through your store</label>
+                            <textarea id="vision_desc" name="vision_desc" required placeholder="From landing page to thank you page..."></textarea>
+                        </div>
+                    </div>
+                </section>
+
+                <div class="btn-group">
+                    <button type="reset" class="btn btn-secondary">Reset Form</button>
+                    <button type="submit" class="btn btn-primary">Submit Questionnaire</button>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <button id="scrollTop" class="scroll-top">↑</button>
+
+    <footer>
+        <p>&copy; 2024 Webstore Builder Solutions. All rights reserved.</p>
+        <p>Your data is processed securely and privately.</p>
+    </footer>
+
+    <script>
+        // Progress Bar Logic
+        const progressBar = document.getElementById('progressBar');
+        window.onscroll = function() {
+            let winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            let scrolled = (winScroll / height) * 100;
+            progressBar.style.width = scrolled + "%";
+
+            // Scroll to Top visibility
+            const scrollTopBtn = document.getElementById('scrollTop');
+            if (winScroll > 300) {
+                scrollTopBtn.classList.add('visible');
+            } else {
+                scrollTopBtn.classList.remove('visible');
+            }
+
+            // Scrollspy logic
+            const sections = document.querySelectorAll('section.card');
+            const navLinks = document.querySelectorAll('.nav-item a');
+            
+            let current = "";
+            sections.forEach((section) => {
+                const sectionTop = section.offsetTop;
+                if (pageYOffset >= sectionTop - 150) {
+                    current = section.getAttribute("id");
+                }
+            });
+
+            navLinks.forEach((link) => {
+                link.classList.remove("active");
+                if (link.getAttribute("href").includes(current)) {
+                    link.classList.add("active");
+                }
+            });
+        };
+
+        // Scroll to Top Click
+        document.getElementById('scrollTop').addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // File Preview Logic
+        document.querySelectorAll('input[type="file"]').forEach(input => {
+            input.addEventListener('change', function(e) {
+                const previewContainer = this.closest('.form-group').querySelector('.file-preview');
+                previewContainer.innerHTML = '';
+                
+                const files = e.target.files;
+                for (let i = 0; i < files.length; i++) {
+                    const file = files[i];
+                    const reader = new FileReader();
+                    
+                    const previewItem = document.createElement('div');
+                    previewItem.classList.add('preview-item');
+                    
+                    if (file.type.startsWith('image/')) {
+                        reader.onload = function(event) {
+                            const img = document.createElement('img');
+                            img.src = event.target.result;
+                            previewItem.appendChild(img);
+                        }
+                        reader.readAsDataURL(file);
+                    } else {
+                        previewItem.textContent = file.name;
+                    }
+                    
+                    previewContainer.appendChild(previewItem);
+                }
+            });
+        });
+
+        // Submission with Fetch
+        document.getElementById('mainForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            const btn = this.querySelector('button[type="submit"]');
+            const originalText = btn.textContent;
+            
+            // Basic Validation
+            const requiredFields = this.querySelectorAll('[required]');
+            let valid = true;
+            requiredFields.forEach(field => {
+                if (!field.value.trim()) {
+                    valid = false;
+                    field.style.borderColor = '#ef4444';
+                } else {
+                    field.style.borderColor = '';
+                }
+            });
+
+            if (!valid) {
+                alert('Please fill in all required fields marked with *');
+                return;
+            }
+
+            // Show loading state
+            btn.textContent = 'Submitting...';
+            btn.disabled = true;
+
+            const formData = new FormData(this);
+
+            try {
+                const response = await fetch(this.action, {
+                    method: 'POST',
+                    body: formData
+                });
+
+                const result = await response.json();
+
+                if (response.ok) {
+                    alert('Success! Your webstore questionnaire has been submitted.');
+                    this.reset();
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                    // Clear file previews
+                    document.querySelectorAll('.file-preview').forEach(p => p.innerHTML = '');
+                } else {
+                    throw new Error(result.error || 'Submission failed');
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                alert('Error: ' + error.message);
+            } finally {
+                btn.textContent = originalText;
+                btn.disabled = false;
+            }
+        });
+    </script>
+</body>
+</html>
+</script>
+</body>
+</html>
