@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-# Root-level dispatcher — runs when Render has no rootDir set on the service.
+# Root-level dispatcher - runs when Render has no rootDir set on the service.
 # Finds the correct site directory via GLONDIA_SITE_SLUG env var.
 
 SITE_SLUG="${GLONDIA_SITE_SLUG:-}"
