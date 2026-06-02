@@ -1,0 +1,37 @@
+{
+  "deploymentId": "dep_rdv36m7qzxxx",
+  "uploadId": "zip_1780397996181",
+  "source": "zip-upload",
+  "originalName": "harden-flow-mpwizxxw.zip",
+  "targetRoot": "generated-sites/harden-flow-mpwizxxw",
+  "sourceRepo": "https://github.com/pistion/glondia-generated-sites",
+  "branch": "main",
+  "detected": {
+    "type": "static-root-html",
+    "projectType": "static-root-html",
+    "framework": "Static HTML",
+    "serviceType": "static_site",
+    "detectedServiceType": "static_site",
+    "detectedBuildCommand": null,
+    "buildCommand": "bash glondia-render-build.sh",
+    "publishDirectory": ".",
+    "detectedPublishDirectory": ".",
+    "detectedStartCommand": null,
+    "startCommand": null,
+    "runtime": null,
+    "nodeVersion": null,
+    "envHints": {
+      "requiredEnv": [],
+      "optionalEnv": [],
+      "publicEnv": [],
+      "databaseHints": [],
+      "riskLevel": "low",
+      "messages": []
+    }
+  },
+  "files": [
+    "index.html"
+  ],
+  "ignoredCount": 0,
+  "createdAt": "2026-06-02T10:59:56.202Z"
+}
