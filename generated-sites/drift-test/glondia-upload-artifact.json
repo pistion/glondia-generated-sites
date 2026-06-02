@@ -1,0 +1,37 @@
+{
+  "deploymentId": "dep_2qh7goayffis",
+  "uploadId": "zip_1780417194580",
+  "source": "zip-upload",
+  "originalName": "wedding.zip",
+  "targetRoot": "generated-sites/drift-test",
+  "sourceRepo": "https://github.com/pistion/glondia-generated-sites",
+  "branch": "main",
+  "detected": {
+    "type": "static-root-html",
+    "projectType": "static-root-html",
+    "framework": "Static HTML",
+    "serviceType": "static_site",
+    "detectedServiceType": "static_site",
+    "detectedBuildCommand": null,
+    "buildCommand": "bash glondia-render-build.sh",
+    "publishDirectory": ".",
+    "detectedPublishDirectory": ".",
+    "detectedStartCommand": null,
+    "startCommand": null,
+    "runtime": null,
+    "nodeVersion": null,
+    "envHints": {
+      "requiredEnv": [],
+      "optionalEnv": [],
+      "publicEnv": [],
+      "databaseHints": [],
+      "riskLevel": "low",
+      "messages": []
+    }
+  },
+  "files": [
+    "index.html"
+  ],
+  "ignoredCount": 0,
+  "createdAt": "2026-06-02T16:19:54.602Z"
+}
