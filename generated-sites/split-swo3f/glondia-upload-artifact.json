@@ -1,0 +1,37 @@
+{
+  "deploymentId": "dep_syoygohwk4uc",
+  "uploadId": "zip_1780400617860",
+  "source": "zip-upload",
+  "originalName": "s.zip",
+  "targetRoot": "generated-sites/split-swo3f",
+  "sourceRepo": "https://github.com/pistion/glondia-generated-sites",
+  "branch": "main",
+  "detected": {
+    "type": "static-root-html",
+    "projectType": "static-root-html",
+    "framework": "Static HTML",
+    "serviceType": "static_site",
+    "detectedServiceType": "static_site",
+    "detectedBuildCommand": null,
+    "buildCommand": "bash glondia-render-build.sh",
+    "publishDirectory": ".",
+    "detectedPublishDirectory": ".",
+    "detectedStartCommand": null,
+    "startCommand": null,
+    "runtime": null,
+    "nodeVersion": null,
+    "envHints": {
+      "requiredEnv": [],
+      "optionalEnv": [],
+      "publicEnv": [],
+      "databaseHints": [],
+      "riskLevel": "low",
+      "messages": []
+    }
+  },
+  "files": [
+    "index.html"
+  ],
+  "ignoredCount": 0,
+  "createdAt": "2026-06-02T11:43:37.875Z"
+}
