@@ -1,0 +1,48 @@
+{
+  "deploymentId": "dep_lm7ropr5bv78",
+  "uploadId": "zip_1780417028276",
+  "source": "zip-upload",
+  "originalName": "wedding-cars-exact.zip",
+  "targetRoot": "generated-sites/wedding-cars-err",
+  "sourceRepo": "https://github.com/pistion/glondia-generated-sites",
+  "branch": "main",
+  "detected": {
+    "type": "static-root-html",
+    "projectType": "static-root-html",
+    "framework": "Static HTML",
+    "serviceType": "static_site",
+    "detectedServiceType": "static_site",
+    "detectedBuildCommand": null,
+    "buildCommand": "bash glondia-render-build.sh",
+    "publishDirectory": ".",
+    "detectedPublishDirectory": ".",
+    "detectedStartCommand": null,
+    "startCommand": null,
+    "runtime": null,
+    "nodeVersion": null,
+    "envHints": {
+      "requiredEnv": [],
+      "optionalEnv": [],
+      "publicEnv": [],
+      "databaseHints": [],
+      "riskLevel": "low",
+      "messages": []
+    }
+  },
+  "files": [
+    "index.html",
+    "p0.html",
+    "p1.html",
+    "p2.html",
+    "p3.html",
+    "p4.html",
+    "p5.html",
+    "p6.html",
+    "p7.html",
+    "p8.html",
+    "p9.html",
+    "style.css"
+  ],
+  "ignoredCount": 0,
+  "createdAt": "2026-06-02T16:17:08.303Z"
+}
