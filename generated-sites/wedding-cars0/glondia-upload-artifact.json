@@ -1,6 +1,6 @@
 {
-  "deploymentId": "dep_48s81bpme0rr",
-  "uploadId": "zip_1780561575782",
+  "deploymentId": "dep_7v676n2xh5u9",
+  "uploadId": "zip_1780657460432",
   "source": "zip-upload",
   "originalName": "wedding-cars-exact.zip",
   "targetRoot": "generated-sites/wedding-cars0",
@@ -41,5 +41,5 @@
     "vite.config.js"
   ],
   "ignoredCount": 0,
-  "createdAt": "2026-06-04T08:26:15.794Z"
+  "createdAt": "2026-06-05T11:04:20.451Z"
 }
