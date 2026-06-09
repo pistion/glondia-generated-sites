@@ -1,5 +1,0 @@
-{
-  "templateId": "forge",
-  "fallback": "/",
-  "routes": ["/", "/shop", "/product", "/repair", "/field-notes", "/support"]
-}
