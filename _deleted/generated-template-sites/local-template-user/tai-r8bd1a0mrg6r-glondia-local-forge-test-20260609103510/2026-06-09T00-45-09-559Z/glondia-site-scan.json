@@ -1,0 +1,60 @@
+{
+  "schema": "glondia.generated-template-site-scan.v1",
+  "scannedAt": "2026-06-09T00:36:03.213Z",
+  "site": {
+    "siteId": "tai_r8bd1a0mrg6r",
+    "siteName": "Glondia Local Forge Test",
+    "slug": "glondia-local-forge-test-20260609103510"
+  },
+  "template": {
+    "templateId": "forge",
+    "name": "Forge",
+    "category": "Commerce",
+    "framework": "vite-react",
+    "templatePath": "templates/forge",
+    "buildCommand": "npm run build",
+    "publishDirectory": "dist"
+  },
+  "source": {
+    "directory": "C:\\var\\glondia\\data\\generated-sites\\tai_r8bd1a0mrg6r",
+    "fileCount": 13,
+    "files": [
+      "glondia-hosting-payload.json",
+      "glondia-site-data.json",
+      "glondia-site-scan.json",
+      "glondia-template-copy.json",
+      "index.html",
+      "package.json",
+      "public/route-manifest.json",
+      "src/App.jsx",
+      "src/main.jsx",
+      "src/routes.js",
+      "src/siteData.js",
+      "src/styles.css",
+      "vite.config.js"
+    ],
+    "hasPackageJson": true,
+    "hasIndexHtml": true,
+    "routes": [
+      "/",
+      "/shop",
+      "/product",
+      "/repair",
+      "/field-notes",
+      "/support"
+    ],
+    "textFileCount": 13
+  },
+  "build": {
+    "framework": "vite-react",
+    "packageManager": "npm",
+    "buildCommand": "npm run build",
+    "publishDirectory": "dist"
+  },
+  "handoff": {
+    "repositoryUrl": "https://github.com/pistion/glondia-generated-sites",
+    "branch": "main",
+    "rootDirectory": "generated-template-sites/local-template-user/tai-r8bd1a0mrg6r-glondia-local-forge-test-20260609103510",
+    "deploymentProvider": "render"
+  }
+}
