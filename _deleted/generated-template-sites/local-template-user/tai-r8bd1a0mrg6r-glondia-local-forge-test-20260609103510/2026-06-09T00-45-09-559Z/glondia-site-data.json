@@ -1,0 +1,174 @@
+{
+  "schema": "glondia.generated-template-site.v1",
+  "source": "template",
+  "sourceReference": "templates/forge",
+  "template": {
+    "templateId": "forge",
+    "name": "Forge",
+    "category": "Commerce",
+    "framework": "vite-react",
+    "templatePath": "templates/forge",
+    "buildCommand": "npm run build",
+    "publishDirectory": "dist"
+  },
+  "generated": {
+    "siteId": "tai_r8bd1a0mrg6r",
+    "userId": "local-template-user",
+    "siteName": "Glondia Local Forge Test",
+    "slug": "glondia-local-forge-test-20260609103510",
+    "githubTargetRoot": "generated-template-sites/local-template-user/tai-r8bd1a0mrg6r-glondia-local-forge-test-20260609103510",
+    "createdAt": "2026-06-09T00:35:29.520Z"
+  },
+  "userInput": {
+    "answers": {
+      "source": "local-e2e-template-test",
+      "industry": "Outdoor commerce",
+      "businessName": "Glondia Local Forge Test",
+      "offer": "Durable trail gear, repairs, and field notes",
+      "wireframe": {
+        "pages": [
+          {
+            "path": "/",
+            "name": "Home",
+            "sections": [
+              {
+                "title": "Hero",
+                "type": "technical-hero",
+                "order": 1
+              }
+            ]
+          }
+        ],
+        "source": "local-e2e"
+      },
+      "sitemap": {
+        "pages": [
+          {
+            "path": "/",
+            "name": "Home",
+            "sections": [
+              {
+                "title": "Hero",
+                "description": "Brand promise and featured offer",
+                "type": "technical-hero"
+              }
+            ]
+          },
+          {
+            "path": "/shop",
+            "name": "Shop",
+            "sections": [
+              {
+                "title": "Product Grid",
+                "description": "Featured durable products",
+                "type": "product-grid"
+              }
+            ]
+          },
+          {
+            "path": "/support",
+            "name": "Support",
+            "sections": [
+              {
+                "title": "Support",
+                "description": "Contact and repair support",
+                "type": "support"
+              }
+            ]
+          }
+        ]
+      },
+      "audience": "Local adventurers and repair customers",
+      "location": "Port Moresby",
+      "style": {
+        "bodyFont": "Inter",
+        "headingFont": "Space Grotesk",
+        "colors": {
+          "background": "#f8faf7",
+          "accent": "#246b55",
+          "text": "#121512"
+        }
+      },
+      "contactEmail": "test@glondia.local",
+      "userId": "local-template-user",
+      "siteName": "Glondia Local Forge Test",
+      "slug": "glondia-local-forge-test-20260609103510",
+      "templateId": "forge"
+    },
+    "brief": {
+      "businessName": "Glondia Local Forge Test",
+      "industry": "Outdoor commerce",
+      "targetAudience": "Local adventurers and repair customers",
+      "offer": "Durable trail gear, repairs, and field notes",
+      "brandTone": "",
+      "colors": "",
+      "stylePreferences": "",
+      "contact": "",
+      "domainPreference": "",
+      "notes": ""
+    },
+    "sitemap": {
+      "pages": [
+        {
+          "path": "/",
+          "name": "Home",
+          "sections": [
+            {
+              "title": "Hero",
+              "description": "Brand promise and featured offer",
+              "type": "technical-hero"
+            }
+          ]
+        },
+        {
+          "path": "/shop",
+          "name": "Shop",
+          "sections": [
+            {
+              "title": "Product Grid",
+              "description": "Featured durable products",
+              "type": "product-grid"
+            }
+          ]
+        },
+        {
+          "path": "/support",
+          "name": "Support",
+          "sections": [
+            {
+              "title": "Support",
+              "description": "Contact and repair support",
+              "type": "support"
+            }
+          ]
+        }
+      ]
+    },
+    "wireframe": {
+      "pages": [
+        {
+          "path": "/",
+          "name": "Home",
+          "sections": [
+            {
+              "title": "Hero",
+              "type": "technical-hero",
+              "order": 1
+            }
+          ]
+        }
+      ],
+      "source": "local-e2e"
+    },
+    "style": {
+      "bodyFont": "Inter",
+      "headingFont": "Space Grotesk",
+      "colors": {
+        "background": "#f8faf7",
+        "accent": "#246b55",
+        "text": "#121512"
+      }
+    }
+  },
+  "updatedAt": "2026-06-09T00:35:29.520Z"
+}
