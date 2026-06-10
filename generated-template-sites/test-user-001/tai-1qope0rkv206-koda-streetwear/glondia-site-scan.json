@@ -1,0 +1,58 @@
+{
+  "schema": "glondia.generated-template-site-scan.v1",
+  "scannedAt": "2026-06-10T20:57:29.112Z",
+  "site": {
+    "siteId": "tai_1qope0rkv206",
+    "siteName": "Koda Streetwear",
+    "slug": "koda-streetwear"
+  },
+  "template": {
+    "templateId": "pulse-works",
+    "name": "Pulse Works",
+    "category": "Commerce",
+    "framework": "vite-react",
+    "templatePath": "templates/pulse-works",
+    "buildCommand": "npm run build",
+    "publishDirectory": "dist"
+  },
+  "source": {
+    "directory": "C:\\Users\\dpm\\Downloads\\Glondiasites_new\\.glondia-data\\generated-sites\\tai_1qope0rkv206",
+    "fileCount": 11,
+    "files": [
+      "glondia-site-data.json",
+      "glondia-template-copy.json",
+      "index.html",
+      "package.json",
+      "public/route-manifest.json",
+      "src/App.jsx",
+      "src/main.jsx",
+      "src/routes.js",
+      "src/siteData.js",
+      "src/styles.css",
+      "vite.config.js"
+    ],
+    "hasPackageJson": true,
+    "hasIndexHtml": true,
+    "routes": [
+      "/",
+      "/shop",
+      "/product",
+      "/lookbook",
+      "/studio",
+      "/contact"
+    ],
+    "textFileCount": 11
+  },
+  "build": {
+    "framework": "vite-react",
+    "packageManager": "npm",
+    "buildCommand": "npm run build",
+    "publishDirectory": "dist"
+  },
+  "handoff": {
+    "repositoryUrl": "https://github.com/pistion/glondia-generated-sites",
+    "branch": "main",
+    "rootDirectory": "generated-template-sites/test-user-001/tai-1qope0rkv206-koda-streetwear",
+    "deploymentProvider": "render"
+  }
+}
