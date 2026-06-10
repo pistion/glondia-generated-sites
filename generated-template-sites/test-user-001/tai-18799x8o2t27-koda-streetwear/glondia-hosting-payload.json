@@ -1,0 +1,12 @@
+{
+  "schema": "glondia.hosting-payload-preview.v1",
+  "provider": "render",
+  "serviceType": "static_site",
+  "repoUrl": "https://github.com/pistion/glondia-generated-sites",
+  "branch": "main",
+  "rootDirectory": "generated-template-sites/test-user-001/tai-18799x8o2t27-koda-streetwear",
+  "buildCommand": "npm run build",
+  "publishDirectory": "dist",
+  "framework": "vite-react",
+  "generatedAt": "2026-06-10T20:35:30.896Z"
+}
