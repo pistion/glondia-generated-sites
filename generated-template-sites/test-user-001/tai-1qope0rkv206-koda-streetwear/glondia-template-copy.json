@@ -1,0 +1,701 @@
+{
+  "schema": "glondia.generated-template-site.v1",
+  "source": "template",
+  "sourceReference": "templates/pulse-works",
+  "template": {
+    "templateId": "pulse-works",
+    "name": "Pulse Works",
+    "category": "Commerce",
+    "framework": "vite-react",
+    "templatePath": "templates/pulse-works",
+    "buildCommand": "npm run build",
+    "publishDirectory": "dist"
+  },
+  "generated": {
+    "siteId": "tai_1qope0rkv206",
+    "userId": "test-user-001",
+    "siteName": "Koda Streetwear",
+    "slug": "koda-streetwear",
+    "githubTargetRoot": "generated-template-sites/test-user-001/tai-1qope0rkv206-koda-streetwear",
+    "createdAt": "2026-06-10T20:57:29.102Z"
+  },
+  "userInput": {
+    "answers": {
+      "businessName": "Koda Streetwear",
+      "industry": "Fashion / Streetwear",
+      "location": "Port Moresby, Papua New Guinea",
+      "description": "Koda Streetwear offers a unique blend of urban fashion, focusing on limited edition drops that resonate with the vibrant culture of streetwear enthusiasts.",
+      "targetAudience": "18-35 urban youth PNG",
+      "offer": "Limited drop hoodies, tees, caps",
+      "uniqueSellingPoint": "Exclusive designs that reflect the local culture and street style.",
+      "goals": "To become a leading streetwear brand in Papua New Guinea and expand into international markets.",
+      "brandTone": "bold, raw, street",
+      "tone": "bold, raw, street",
+      "colors": "#000000, #FF3B00, #FFFFFF",
+      "stylePreferences": "editorial, dark, high contrast",
+      "pages": "Home, Shop, Product, Lookbook, Studio, Contact",
+      "contact": "koda@kodaclothing.pg",
+      "phone": "",
+      "email": "koda@kodaclothing.pg",
+      "whatsapp": "",
+      "address": "",
+      "socialLinks": "",
+      "domainPreference": "",
+      "seoTitle": "Koda Streetwear - Urban Fashion for the Bold",
+      "seoDescription": "Discover Koda Streetwear's exclusive collections of hoodies, tees, and caps designed for the urban youth of Papua New Guinea.",
+      "seoKeywords": "streetwear, fashion, urban, Papua New Guinea, hoodies, tees, caps",
+      "notes": "",
+      "sitemap": {
+        "pages": [
+          {
+            "id": "page_6rbkaot",
+            "name": "Home",
+            "path": "/",
+            "purpose": "",
+            "sections": [
+              {
+                "id": "section_hdrl4s3",
+                "type": "hero",
+                "title": "Drop Different. Wear Koda.",
+                "content": "",
+                "ctaText": "Shop the Drop",
+                "imageHint": "",
+                "source": "system"
+              },
+              {
+                "id": "section_xq5sauw",
+                "type": "about",
+                "title": "About Us",
+                "content": "At Koda Streetwear, we believe in the power of self-expression through fashion. Our pieces are designed for those who dare to stand out and make a statement.",
+                "ctaText": "Learn More",
+                "imageHint": "Image of the team or studio",
+                "source": "system"
+              }
+            ]
+          },
+          {
+            "id": "page_pmxhp78",
+            "name": "Shop",
+            "path": "/shop",
+            "purpose": "To provide customers with an easy way to browse and purchase our products.",
+            "sections": [
+              {
+                "id": "section_qkdujxv",
+                "type": "featured-products",
+                "title": "Featured Products",
+                "content": "Check out our latest drops and bestsellers.",
+                "ctaText": "View All Products",
+                "imageHint": "Images of featured products",
+                "source": "system"
+              }
+            ]
+          },
+          {
+            "id": "page_etl1u0r",
+            "name": "Product",
+            "path": "/product",
+            "purpose": "To showcase individual products with detailed descriptions and purchasing options.",
+            "sections": [
+              {
+                "id": "section_7zqtzoc",
+                "type": "product",
+                "title": "Product Details",
+                "content": "Discover the unique features and styling of our products.",
+                "ctaText": "Add to Cart",
+                "imageHint": "Product images",
+                "source": "system"
+              }
+            ]
+          },
+          {
+            "id": "page_3r4p6ku",
+            "name": "Lookbook",
+            "path": "/lookbook",
+            "purpose": "To inspire customers with styling ideas and showcase our products in real-life settings.",
+            "sections": [
+              {
+                "id": "section_r1djdyz",
+                "type": "lookbook",
+                "title": "Our Lookbook",
+                "content": "Explore how to style our pieces and get inspired by the latest trends.",
+                "ctaText": "View Lookbook",
+                "imageHint": "Lookbook images featuring models in Koda Streetwear",
+                "source": "system"
+              }
+            ]
+          },
+          {
+            "id": "page_zeisfid",
+            "name": "Studio",
+            "path": "/studio",
+            "purpose": "To share the story behind Koda Streetwear and our creative process.",
+            "sections": [
+              {
+                "id": "section_sp4oy6f",
+                "type": "studio-story",
+                "title": "Our Studio Story",
+                "content": "Learn about our journey, inspiration, and the craftsmanship behind our collections.",
+                "ctaText": "Discover More",
+                "imageHint": "Images of the studio and design process",
+                "source": "system"
+              }
+            ]
+          },
+          {
+            "id": "page_ownxdvl",
+            "name": "Contact",
+            "path": "/contact",
+            "purpose": "To provide customers with a way to reach out for inquiries or support.",
+            "sections": [
+              {
+                "id": "section_3933fid",
+                "type": "contact-form",
+                "title": "Get in Touch",
+                "content": "We'd love to hear from you! Fill out the form below for any inquiries.",
+                "ctaText": "Submit",
+                "imageHint": "",
+                "source": "system"
+              }
+            ]
+          }
+        ]
+      },
+      "wireframe": {
+        "pages": [
+          {
+            "id": "page_6rbkaot",
+            "name": "Home",
+            "path": "/",
+            "purpose": "",
+            "sections": [
+              {
+                "id": "section_hdrl4s3",
+                "type": "hero",
+                "title": "Drop Different. Wear Koda.",
+                "content": "",
+                "ctaText": "Shop the Drop",
+                "imageHint": "",
+                "source": "system"
+              },
+              {
+                "id": "section_xq5sauw",
+                "type": "about",
+                "title": "About Us",
+                "content": "At Koda Streetwear, we believe in the power of self-expression through fashion. Our pieces are designed for those who dare to stand out and make a statement.",
+                "ctaText": "Learn More",
+                "imageHint": "Image of the team or studio",
+                "source": "system"
+              }
+            ]
+          },
+          {
+            "id": "page_pmxhp78",
+            "name": "Shop",
+            "path": "/shop",
+            "purpose": "To provide customers with an easy way to browse and purchase our products.",
+            "sections": [
+              {
+                "id": "section_qkdujxv",
+                "type": "featured-products",
+                "title": "Featured Products",
+                "content": "Check out our latest drops and bestsellers.",
+                "ctaText": "View All Products",
+                "imageHint": "Images of featured products",
+                "source": "system"
+              }
+            ]
+          },
+          {
+            "id": "page_etl1u0r",
+            "name": "Product",
+            "path": "/product",
+            "purpose": "To showcase individual products with detailed descriptions and purchasing options.",
+            "sections": [
+              {
+                "id": "section_7zqtzoc",
+                "type": "product",
+                "title": "Product Details",
+                "content": "Discover the unique features and styling of our products.",
+                "ctaText": "Add to Cart",
+                "imageHint": "Product images",
+                "source": "system"
+              }
+            ]
+          },
+          {
+            "id": "page_3r4p6ku",
+            "name": "Lookbook",
+            "path": "/lookbook",
+            "purpose": "To inspire customers with styling ideas and showcase our products in real-life settings.",
+            "sections": [
+              {
+                "id": "section_r1djdyz",
+                "type": "lookbook",
+                "title": "Our Lookbook",
+                "content": "Explore how to style our pieces and get inspired by the latest trends.",
+                "ctaText": "View Lookbook",
+                "imageHint": "Lookbook images featuring models in Koda Streetwear",
+                "source": "system"
+              }
+            ]
+          },
+          {
+            "id": "page_zeisfid",
+            "name": "Studio",
+            "path": "/studio",
+            "purpose": "To share the story behind Koda Streetwear and our creative process.",
+            "sections": [
+              {
+                "id": "section_sp4oy6f",
+                "type": "studio-story",
+                "title": "Our Studio Story",
+                "content": "Learn about our journey, inspiration, and the craftsmanship behind our collections.",
+                "ctaText": "Discover More",
+                "imageHint": "Images of the studio and design process",
+                "source": "system"
+              }
+            ]
+          },
+          {
+            "id": "page_ownxdvl",
+            "name": "Contact",
+            "path": "/contact",
+            "purpose": "To provide customers with a way to reach out for inquiries or support.",
+            "sections": [
+              {
+                "id": "section_3933fid",
+                "type": "contact-form",
+                "title": "Get in Touch",
+                "content": "We'd love to hear from you! Fill out the form below for any inquiries.",
+                "ctaText": "Submit",
+                "imageHint": "",
+                "source": "system"
+              }
+            ]
+          }
+        ]
+      },
+      "answerSheet": {
+        "version": "1.0.0",
+        "source": "site-plan",
+        "status": "ai_generated",
+        "business": {
+          "name": "Koda Streetwear",
+          "industry": "Fashion / Streetwear",
+          "location": "Port Moresby, Papua New Guinea",
+          "description": "Koda Streetwear offers a unique blend of urban fashion, focusing on limited edition drops that resonate with the vibrant culture of streetwear enthusiasts.",
+          "targetAudience": "18-35 urban youth PNG",
+          "offer": "Limited drop hoodies, tees, caps",
+          "uniqueSellingPoint": "Exclusive designs that reflect the local culture and street style.",
+          "goals": "To become a leading streetwear brand in Papua New Guinea and expand into international markets."
+        },
+        "brand": {
+          "tone": "bold, raw, street",
+          "colors": "#000000, #FF3B00, #FFFFFF",
+          "stylePreferences": "editorial, dark, high contrast"
+        },
+        "pages": [
+          {
+            "id": "page_6rbkaot",
+            "name": "Home",
+            "path": "/",
+            "purpose": "",
+            "sections": [
+              {
+                "id": "section_hdrl4s3",
+                "type": "hero",
+                "title": "Drop Different. Wear Koda.",
+                "content": "",
+                "ctaText": "Shop the Drop",
+                "imageHint": "",
+                "source": "system"
+              },
+              {
+                "id": "section_xq5sauw",
+                "type": "about",
+                "title": "About Us",
+                "content": "At Koda Streetwear, we believe in the power of self-expression through fashion. Our pieces are designed for those who dare to stand out and make a statement.",
+                "ctaText": "Learn More",
+                "imageHint": "Image of the team or studio",
+                "source": "system"
+              }
+            ]
+          },
+          {
+            "id": "page_pmxhp78",
+            "name": "Shop",
+            "path": "/shop",
+            "purpose": "To provide customers with an easy way to browse and purchase our products.",
+            "sections": [
+              {
+                "id": "section_qkdujxv",
+                "type": "featured-products",
+                "title": "Featured Products",
+                "content": "Check out our latest drops and bestsellers.",
+                "ctaText": "View All Products",
+                "imageHint": "Images of featured products",
+                "source": "system"
+              }
+            ]
+          },
+          {
+            "id": "page_etl1u0r",
+            "name": "Product",
+            "path": "/product",
+            "purpose": "To showcase individual products with detailed descriptions and purchasing options.",
+            "sections": [
+              {
+                "id": "section_7zqtzoc",
+                "type": "product",
+                "title": "Product Details",
+                "content": "Discover the unique features and styling of our products.",
+                "ctaText": "Add to Cart",
+                "imageHint": "Product images",
+                "source": "system"
+              }
+            ]
+          },
+          {
+            "id": "page_3r4p6ku",
+            "name": "Lookbook",
+            "path": "/lookbook",
+            "purpose": "To inspire customers with styling ideas and showcase our products in real-life settings.",
+            "sections": [
+              {
+                "id": "section_r1djdyz",
+                "type": "lookbook",
+                "title": "Our Lookbook",
+                "content": "Explore how to style our pieces and get inspired by the latest trends.",
+                "ctaText": "View Lookbook",
+                "imageHint": "Lookbook images featuring models in Koda Streetwear",
+                "source": "system"
+              }
+            ]
+          },
+          {
+            "id": "page_zeisfid",
+            "name": "Studio",
+            "path": "/studio",
+            "purpose": "To share the story behind Koda Streetwear and our creative process.",
+            "sections": [
+              {
+                "id": "section_sp4oy6f",
+                "type": "studio-story",
+                "title": "Our Studio Story",
+                "content": "Learn about our journey, inspiration, and the craftsmanship behind our collections.",
+                "ctaText": "Discover More",
+                "imageHint": "Images of the studio and design process",
+                "source": "system"
+              }
+            ]
+          },
+          {
+            "id": "page_ownxdvl",
+            "name": "Contact",
+            "path": "/contact",
+            "purpose": "To provide customers with a way to reach out for inquiries or support.",
+            "sections": [
+              {
+                "id": "section_3933fid",
+                "type": "contact-form",
+                "title": "Get in Touch",
+                "content": "We'd love to hear from you! Fill out the form below for any inquiries.",
+                "ctaText": "Submit",
+                "imageHint": "",
+                "source": "system"
+              }
+            ]
+          }
+        ],
+        "contact": {
+          "phone": "",
+          "email": "koda@kodaclothing.pg",
+          "whatsapp": "",
+          "address": "",
+          "socialLinks": [],
+          "primaryAction": "koda@kodaclothing.pg"
+        },
+        "seo": {
+          "title": "Koda Streetwear - Urban Fashion for the Bold",
+          "description": "Discover Koda Streetwear's exclusive collections of hoodies, tees, and caps designed for the urban youth of Papua New Guinea.",
+          "keywords": [
+            "streetwear",
+            "fashion",
+            "urban",
+            "Papua New Guinea",
+            "hoodies",
+            "tees",
+            "caps"
+          ]
+        },
+        "notes": "",
+        "meta": {
+          "createdAt": "2026-06-10T20:56:03.217Z",
+          "updatedAt": "2026-06-10T20:56:36.580Z",
+          "generatedByAi": true,
+          "approvedAt": null,
+          "warnings": [
+            "Missing critical contact information: phone number, address."
+          ]
+        }
+      },
+      "heroTitle": "Drop Different. Wear Koda.",
+      "heroSubtitle": "Koda Streetwear offers a unique blend of urban fashion, focusing on limited edition drops that resonate with the vibrant culture of streetwear enthusiasts.",
+      "heroCta": "Shop the Drop",
+      "aboutTitle": "About Us",
+      "aboutText": "At Koda Streetwear, we believe in the power of self-expression through fashion. Our pieces are designed for those who dare to stand out and make a statement.",
+      "servicesTitle": "Our Services",
+      "servicesText": "Limited drop hoodies, tees, caps",
+      "contactTitle": "Contact Us",
+      "contactText": "koda@kodaclothing.pg",
+      "userId": "test-user-001",
+      "siteName": "Koda Streetwear",
+      "slug": "koda-streetwear",
+      "templateId": "pulse-works"
+    },
+    "brief": {
+      "businessName": "Koda Streetwear",
+      "industry": "Fashion / Streetwear",
+      "targetAudience": "18-35 urban youth PNG",
+      "offer": "Limited drop hoodies, tees, caps",
+      "brandTone": "bold, raw, street",
+      "colors": "#000000, #FF3B00, #FFFFFF",
+      "stylePreferences": "editorial, dark, high contrast",
+      "contact": "koda@kodaclothing.pg",
+      "domainPreference": "",
+      "notes": ""
+    },
+    "sitemap": {
+      "pages": [
+        {
+          "id": "page_6rbkaot",
+          "name": "Home",
+          "path": "/",
+          "purpose": "",
+          "sections": [
+            {
+              "id": "section_hdrl4s3",
+              "type": "hero",
+              "title": "Drop Different. Wear Koda.",
+              "content": "",
+              "ctaText": "Shop the Drop",
+              "imageHint": "",
+              "source": "system"
+            },
+            {
+              "id": "section_xq5sauw",
+              "type": "about",
+              "title": "About Us",
+              "content": "At Koda Streetwear, we believe in the power of self-expression through fashion. Our pieces are designed for those who dare to stand out and make a statement.",
+              "ctaText": "Learn More",
+              "imageHint": "Image of the team or studio",
+              "source": "system"
+            }
+          ]
+        },
+        {
+          "id": "page_pmxhp78",
+          "name": "Shop",
+          "path": "/shop",
+          "purpose": "To provide customers with an easy way to browse and purchase our products.",
+          "sections": [
+            {
+              "id": "section_qkdujxv",
+              "type": "featured-products",
+              "title": "Featured Products",
+              "content": "Check out our latest drops and bestsellers.",
+              "ctaText": "View All Products",
+              "imageHint": "Images of featured products",
+              "source": "system"
+            }
+          ]
+        },
+        {
+          "id": "page_etl1u0r",
+          "name": "Product",
+          "path": "/product",
+          "purpose": "To showcase individual products with detailed descriptions and purchasing options.",
+          "sections": [
+            {
+              "id": "section_7zqtzoc",
+              "type": "product",
+              "title": "Product Details",
+              "content": "Discover the unique features and styling of our products.",
+              "ctaText": "Add to Cart",
+              "imageHint": "Product images",
+              "source": "system"
+            }
+          ]
+        },
+        {
+          "id": "page_3r4p6ku",
+          "name": "Lookbook",
+          "path": "/lookbook",
+          "purpose": "To inspire customers with styling ideas and showcase our products in real-life settings.",
+          "sections": [
+            {
+              "id": "section_r1djdyz",
+              "type": "lookbook",
+              "title": "Our Lookbook",
+              "content": "Explore how to style our pieces and get inspired by the latest trends.",
+              "ctaText": "View Lookbook",
+              "imageHint": "Lookbook images featuring models in Koda Streetwear",
+              "source": "system"
+            }
+          ]
+        },
+        {
+          "id": "page_zeisfid",
+          "name": "Studio",
+          "path": "/studio",
+          "purpose": "To share the story behind Koda Streetwear and our creative process.",
+          "sections": [
+            {
+              "id": "section_sp4oy6f",
+              "type": "studio-story",
+              "title": "Our Studio Story",
+              "content": "Learn about our journey, inspiration, and the craftsmanship behind our collections.",
+              "ctaText": "Discover More",
+              "imageHint": "Images of the studio and design process",
+              "source": "system"
+            }
+          ]
+        },
+        {
+          "id": "page_ownxdvl",
+          "name": "Contact",
+          "path": "/contact",
+          "purpose": "To provide customers with a way to reach out for inquiries or support.",
+          "sections": [
+            {
+              "id": "section_3933fid",
+              "type": "contact-form",
+              "title": "Get in Touch",
+              "content": "We'd love to hear from you! Fill out the form below for any inquiries.",
+              "ctaText": "Submit",
+              "imageHint": "",
+              "source": "system"
+            }
+          ]
+        }
+      ]
+    },
+    "wireframe": {
+      "pages": [
+        {
+          "id": "page_6rbkaot",
+          "name": "Home",
+          "path": "/",
+          "purpose": "",
+          "sections": [
+            {
+              "id": "section_hdrl4s3",
+              "type": "hero",
+              "title": "Drop Different. Wear Koda.",
+              "content": "",
+              "ctaText": "Shop the Drop",
+              "imageHint": "",
+              "source": "system"
+            },
+            {
+              "id": "section_xq5sauw",
+              "type": "about",
+              "title": "About Us",
+              "content": "At Koda Streetwear, we believe in the power of self-expression through fashion. Our pieces are designed for those who dare to stand out and make a statement.",
+              "ctaText": "Learn More",
+              "imageHint": "Image of the team or studio",
+              "source": "system"
+            }
+          ]
+        },
+        {
+          "id": "page_pmxhp78",
+          "name": "Shop",
+          "path": "/shop",
+          "purpose": "To provide customers with an easy way to browse and purchase our products.",
+          "sections": [
+            {
+              "id": "section_qkdujxv",
+              "type": "featured-products",
+              "title": "Featured Products",
+              "content": "Check out our latest drops and bestsellers.",
+              "ctaText": "View All Products",
+              "imageHint": "Images of featured products",
+              "source": "system"
+            }
+          ]
+        },
+        {
+          "id": "page_etl1u0r",
+          "name": "Product",
+          "path": "/product",
+          "purpose": "To showcase individual products with detailed descriptions and purchasing options.",
+          "sections": [
+            {
+              "id": "section_7zqtzoc",
+              "type": "product",
+              "title": "Product Details",
+              "content": "Discover the unique features and styling of our products.",
+              "ctaText": "Add to Cart",
+              "imageHint": "Product images",
+              "source": "system"
+            }
+          ]
+        },
+        {
+          "id": "page_3r4p6ku",
+          "name": "Lookbook",
+          "path": "/lookbook",
+          "purpose": "To inspire customers with styling ideas and showcase our products in real-life settings.",
+          "sections": [
+            {
+              "id": "section_r1djdyz",
+              "type": "lookbook",
+              "title": "Our Lookbook",
+              "content": "Explore how to style our pieces and get inspired by the latest trends.",
+              "ctaText": "View Lookbook",
+              "imageHint": "Lookbook images featuring models in Koda Streetwear",
+              "source": "system"
+            }
+          ]
+        },
+        {
+          "id": "page_zeisfid",
+          "name": "Studio",
+          "path": "/studio",
+          "purpose": "To share the story behind Koda Streetwear and our creative process.",
+          "sections": [
+            {
+              "id": "section_sp4oy6f",
+              "type": "studio-story",
+              "title": "Our Studio Story",
+              "content": "Learn about our journey, inspiration, and the craftsmanship behind our collections.",
+              "ctaText": "Discover More",
+              "imageHint": "Images of the studio and design process",
+              "source": "system"
+            }
+          ]
+        },
+        {
+          "id": "page_ownxdvl",
+          "name": "Contact",
+          "path": "/contact",
+          "purpose": "To provide customers with a way to reach out for inquiries or support.",
+          "sections": [
+            {
+              "id": "section_3933fid",
+              "type": "contact-form",
+              "title": "Get in Touch",
+              "content": "We'd love to hear from you! Fill out the form below for any inquiries.",
+              "ctaText": "Submit",
+              "imageHint": "",
+              "source": "system"
+            }
+          ]
+        }
+      ]
+    },
+    "style": null
+  },
+  "updatedAt": "2026-06-10T20:57:29.102Z"
+}
