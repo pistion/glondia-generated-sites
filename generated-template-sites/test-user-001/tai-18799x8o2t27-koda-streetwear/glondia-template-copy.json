@@ -1,0 +1,365 @@
+{
+  "schema": "glondia.generated-template-site.v1",
+  "source": "template",
+  "sourceReference": "templates/pulse-works",
+  "template": {
+    "templateId": "pulse-works",
+    "name": "Pulse Works",
+    "category": "Commerce",
+    "framework": "vite-react",
+    "templatePath": "templates/pulse-works",
+    "buildCommand": "npm run build",
+    "publishDirectory": "dist"
+  },
+  "generated": {
+    "siteId": "tai_18799x8o2t27",
+    "userId": "test-user-001",
+    "siteName": "Koda Streetwear",
+    "slug": "koda-streetwear",
+    "githubTargetRoot": "generated-template-sites/test-user-001/tai-18799x8o2t27-koda-streetwear",
+    "createdAt": "2026-06-10T20:35:30.893Z"
+  },
+  "userInput": {
+    "answers": {
+      "businessName": "Koda Streetwear",
+      "industry": "Fashion / Streetwear",
+      "location": "Port Moresby, Papua New Guinea",
+      "description": "Koda Streetwear offers a unique blend of urban fashion with limited edition drops that resonate with the spirit of the streets. Our collections reflect the vibrant culture and lifestyle of the youth in Papua New Guinea.",
+      "targetAudience": "18-35 urban youth PNG",
+      "offer": "Limited drop hoodies, tees, caps",
+      "uniqueSellingPoint": "Exclusive designs that capture the essence of street culture in PNG.",
+      "goals": "To establish Koda Streetwear as a leading brand in the PNG streetwear market and to connect with the youth through fashion.",
+      "brandTone": "bold, raw, street",
+      "tone": "bold, raw, street",
+      "colors": "#000000, #FF3B00, #FFFFFF",
+      "stylePreferences": "editorial, dark, high contrast",
+      "pages": "Home",
+      "contact": "koda@kodaclothing.pg",
+      "phone": "",
+      "email": "koda@kodaclothing.pg",
+      "whatsapp": "",
+      "address": "koda@kodaclothing.pg",
+      "socialLinks": "",
+      "domainPreference": "",
+      "seoTitle": "Koda Streetwear - Urban Fashion for the Youth",
+      "seoDescription": "Koda Streetwear offers limited edition streetwear that captures the essence of urban culture in Papua New Guinea. Shop now for exclusive designs!",
+      "seoKeywords": "streetwear, fashion, urban clothing, limited edition, Papua New Guinea",
+      "notes": "",
+      "sitemap": {
+        "pages": [
+          {
+            "id": "page_dnunhzl",
+            "name": "Home",
+            "path": "/",
+            "purpose": "Main landing page",
+            "sections": [
+              {
+                "id": "section_dadhob1",
+                "type": "hero",
+                "title": "",
+                "content": "",
+                "ctaText": "",
+                "imageHint": "",
+                "source": "system"
+              },
+              {
+                "id": "section_etocyh5",
+                "type": "about",
+                "title": "",
+                "content": "",
+                "ctaText": "",
+                "imageHint": "",
+                "source": "system"
+              },
+              {
+                "id": "section_wpvvx9a",
+                "type": "services",
+                "title": "",
+                "content": "",
+                "ctaText": "",
+                "imageHint": "",
+                "source": "system"
+              },
+              {
+                "id": "section_freodut",
+                "type": "contact",
+                "title": "",
+                "content": "",
+                "ctaText": "",
+                "imageHint": "",
+                "source": "system"
+              }
+            ]
+          }
+        ]
+      },
+      "wireframe": {
+        "pages": [
+          {
+            "id": "page_dnunhzl",
+            "name": "Home",
+            "path": "/",
+            "purpose": "Main landing page",
+            "sections": [
+              {
+                "id": "section_dadhob1",
+                "type": "hero",
+                "title": "",
+                "content": "",
+                "ctaText": "",
+                "imageHint": "",
+                "source": "system"
+              },
+              {
+                "id": "section_etocyh5",
+                "type": "about",
+                "title": "",
+                "content": "",
+                "ctaText": "",
+                "imageHint": "",
+                "source": "system"
+              },
+              {
+                "id": "section_wpvvx9a",
+                "type": "services",
+                "title": "",
+                "content": "",
+                "ctaText": "",
+                "imageHint": "",
+                "source": "system"
+              },
+              {
+                "id": "section_freodut",
+                "type": "contact",
+                "title": "",
+                "content": "",
+                "ctaText": "",
+                "imageHint": "",
+                "source": "system"
+              }
+            ]
+          }
+        ]
+      },
+      "answerSheet": {
+        "version": "1.0.0",
+        "source": "site-plan",
+        "status": "ai_generated",
+        "business": {
+          "name": "Koda Streetwear",
+          "industry": "Fashion / Streetwear",
+          "location": "Port Moresby, Papua New Guinea",
+          "description": "Koda Streetwear offers a unique blend of urban fashion with limited edition drops that resonate with the spirit of the streets. Our collections reflect the vibrant culture and lifestyle of the youth in Papua New Guinea.",
+          "targetAudience": "18-35 urban youth PNG",
+          "offer": "Limited drop hoodies, tees, caps",
+          "uniqueSellingPoint": "Exclusive designs that capture the essence of street culture in PNG.",
+          "goals": "To establish Koda Streetwear as a leading brand in the PNG streetwear market and to connect with the youth through fashion."
+        },
+        "brand": {
+          "tone": "bold, raw, street",
+          "colors": "#000000, #FF3B00, #FFFFFF",
+          "stylePreferences": "editorial, dark, high contrast"
+        },
+        "pages": [
+          {
+            "id": "page_dnunhzl",
+            "name": "Home",
+            "path": "/",
+            "purpose": "Main landing page",
+            "sections": [
+              {
+                "id": "section_dadhob1",
+                "type": "hero",
+                "title": "",
+                "content": "",
+                "ctaText": "",
+                "imageHint": "",
+                "source": "system"
+              },
+              {
+                "id": "section_etocyh5",
+                "type": "about",
+                "title": "",
+                "content": "",
+                "ctaText": "",
+                "imageHint": "",
+                "source": "system"
+              },
+              {
+                "id": "section_wpvvx9a",
+                "type": "services",
+                "title": "",
+                "content": "",
+                "ctaText": "",
+                "imageHint": "",
+                "source": "system"
+              },
+              {
+                "id": "section_freodut",
+                "type": "contact",
+                "title": "",
+                "content": "",
+                "ctaText": "",
+                "imageHint": "",
+                "source": "system"
+              }
+            ]
+          }
+        ],
+        "contact": {
+          "phone": "",
+          "email": "koda@kodaclothing.pg",
+          "whatsapp": "",
+          "address": "koda@kodaclothing.pg",
+          "socialLinks": [],
+          "primaryAction": "koda@kodaclothing.pg"
+        },
+        "seo": {
+          "title": "Koda Streetwear - Urban Fashion for the Youth",
+          "description": "Koda Streetwear offers limited edition streetwear that captures the essence of urban culture in Papua New Guinea. Shop now for exclusive designs!",
+          "keywords": [
+            "streetwear",
+            "fashion",
+            "urban clothing",
+            "limited edition",
+            "Papua New Guinea"
+          ]
+        },
+        "notes": "",
+        "meta": {
+          "createdAt": "2026-06-10T20:33:36.209Z",
+          "updatedAt": "2026-06-10T20:34:01.717Z",
+          "generatedByAi": true,
+          "approvedAt": null,
+          "warnings": []
+        },
+        "hero": {
+          "title": "Drop Different. Wear Koda."
+        }
+      },
+      "heroTitle": "Koda Streetwear",
+      "heroSubtitle": "Koda Streetwear offers a unique blend of urban fashion with limited edition drops that resonate with the spirit of the streets. Our collections reflect the vibrant culture and lifestyle of the youth in Papua New Guinea.",
+      "heroCta": "koda@kodaclothing.pg",
+      "aboutTitle": "About Koda Streetwear",
+      "aboutText": "Koda Streetwear offers a unique blend of urban fashion with limited edition drops that resonate with the spirit of the streets. Our collections reflect the vibrant culture and lifestyle of the youth in Papua New Guinea.",
+      "servicesTitle": "Our Services",
+      "servicesText": "Limited drop hoodies, tees, caps",
+      "contactTitle": "Contact Us",
+      "contactText": "koda@kodaclothing.pg",
+      "userId": "test-user-001",
+      "siteName": "Koda Streetwear",
+      "slug": "koda-streetwear",
+      "templateId": "pulse-works"
+    },
+    "brief": {
+      "businessName": "Koda Streetwear",
+      "industry": "Fashion / Streetwear",
+      "targetAudience": "18-35 urban youth PNG",
+      "offer": "Limited drop hoodies, tees, caps",
+      "brandTone": "bold, raw, street",
+      "colors": "#000000, #FF3B00, #FFFFFF",
+      "stylePreferences": "editorial, dark, high contrast",
+      "contact": "koda@kodaclothing.pg",
+      "domainPreference": "",
+      "notes": ""
+    },
+    "sitemap": {
+      "pages": [
+        {
+          "id": "page_dnunhzl",
+          "name": "Home",
+          "path": "/",
+          "purpose": "Main landing page",
+          "sections": [
+            {
+              "id": "section_dadhob1",
+              "type": "hero",
+              "title": "",
+              "content": "",
+              "ctaText": "",
+              "imageHint": "",
+              "source": "system"
+            },
+            {
+              "id": "section_etocyh5",
+              "type": "about",
+              "title": "",
+              "content": "",
+              "ctaText": "",
+              "imageHint": "",
+              "source": "system"
+            },
+            {
+              "id": "section_wpvvx9a",
+              "type": "services",
+              "title": "",
+              "content": "",
+              "ctaText": "",
+              "imageHint": "",
+              "source": "system"
+            },
+            {
+              "id": "section_freodut",
+              "type": "contact",
+              "title": "",
+              "content": "",
+              "ctaText": "",
+              "imageHint": "",
+              "source": "system"
+            }
+          ]
+        }
+      ]
+    },
+    "wireframe": {
+      "pages": [
+        {
+          "id": "page_dnunhzl",
+          "name": "Home",
+          "path": "/",
+          "purpose": "Main landing page",
+          "sections": [
+            {
+              "id": "section_dadhob1",
+              "type": "hero",
+              "title": "",
+              "content": "",
+              "ctaText": "",
+              "imageHint": "",
+              "source": "system"
+            },
+            {
+              "id": "section_etocyh5",
+              "type": "about",
+              "title": "",
+              "content": "",
+              "ctaText": "",
+              "imageHint": "",
+              "source": "system"
+            },
+            {
+              "id": "section_wpvvx9a",
+              "type": "services",
+              "title": "",
+              "content": "",
+              "ctaText": "",
+              "imageHint": "",
+              "source": "system"
+            },
+            {
+              "id": "section_freodut",
+              "type": "contact",
+              "title": "",
+              "content": "",
+              "ctaText": "",
+              "imageHint": "",
+              "source": "system"
+            }
+          ]
+        }
+      ]
+    },
+    "style": null
+  },
+  "updatedAt": "2026-06-10T20:35:30.893Z"
+}
