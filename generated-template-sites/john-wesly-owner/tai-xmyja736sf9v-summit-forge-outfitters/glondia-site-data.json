@@ -1,0 +1,781 @@
+{
+  "schema": "glondia.generated-template-site.v1",
+  "source": "template",
+  "sourceReference": "templates/forge",
+  "template": {
+    "templateId": "forge",
+    "name": "Forge",
+    "category": "Commerce",
+    "framework": "vite-react",
+    "templatePath": "templates/forge",
+    "buildCommand": "npm run build",
+    "publishDirectory": "dist"
+  },
+  "generated": {
+    "siteId": "tai_xmyja736sf9v",
+    "userId": "john-wesly-owner",
+    "siteName": "Summit Forge Outfitters",
+    "slug": "summit-forge-outfitters",
+    "githubTargetRoot": "generated-template-sites/john-wesly-owner/tai-xmyja736sf9v-summit-forge-outfitters",
+    "createdAt": "2026-06-12T17:42:47.939Z"
+  },
+  "userInput": {
+    "answers": {
+      "businessName": "Summit Forge Outfitters",
+      "industry": "Outdoor gear retail",
+      "location": "",
+      "description": "Summit Forge Outfitters sells durable outdoor gear and provides field repair services for hikers and trail runners across Papua New Guinea.",
+      "targetAudience": "Hikers and trail runners",
+      "offer": "Durable jackets, boots, and a repair service",
+      "uniqueSellingPoint": "",
+      "goals": "",
+      "brandTone": "rugged, trustworthy",
+      "tone": "rugged, trustworthy",
+      "colors": "forest green, slate",
+      "stylePreferences": "",
+      "pages": "Home, Shop, Product, Repair, Field Notes, Support",
+      "contact": "hello@summitforge.example",
+      "phone": "",
+      "email": "hello@summitforge.example",
+      "whatsapp": "",
+      "address": "",
+      "socialLinks": "",
+      "domainPreference": "",
+      "seoTitle": "",
+      "seoDescription": "",
+      "seoKeywords": "",
+      "notes": "",
+      "sitemap": {
+        "pages": [
+          {
+            "id": "page_forge_0",
+            "name": "Home",
+            "path": "/",
+            "purpose": "",
+            "sections": [
+              {
+                "id": "sec_home_0",
+                "type": "technical-hero",
+                "title": "Technical Hero",
+                "content": "",
+                "ctaText": "",
+                "imageHint": "",
+                "source": "manual"
+              },
+              {
+                "id": "sec_home_1",
+                "type": "product-grid",
+                "title": "Product Grid",
+                "content": "",
+                "ctaText": "",
+                "imageHint": "",
+                "source": "manual"
+              },
+              {
+                "id": "sec_home_2",
+                "type": "repair-intake",
+                "title": "Repair Intake",
+                "content": "",
+                "ctaText": "",
+                "imageHint": "",
+                "source": "manual"
+              },
+              {
+                "id": "sec_home_3",
+                "type": "field-notes",
+                "title": "Field Notes",
+                "content": "",
+                "ctaText": "",
+                "imageHint": "",
+                "source": "manual"
+              }
+            ]
+          },
+          {
+            "id": "page_forge_1",
+            "name": "Shop",
+            "path": "/shop",
+            "purpose": "",
+            "sections": [
+              {
+                "id": "section_7773n2h",
+                "type": "featured-products",
+                "title": "",
+                "content": "",
+                "ctaText": "",
+                "imageHint": "",
+                "source": "system"
+              }
+            ]
+          },
+          {
+            "id": "page_forge_2",
+            "name": "Product",
+            "path": "/product",
+            "purpose": "",
+            "sections": [
+              {
+                "id": "section_e9bz6nj",
+                "type": "product",
+                "title": "",
+                "content": "",
+                "ctaText": "",
+                "imageHint": "",
+                "source": "system"
+              }
+            ]
+          },
+          {
+            "id": "page_forge_3",
+            "name": "Repair",
+            "path": "/repair",
+            "purpose": "",
+            "sections": [
+              {
+                "id": "section_ird0rdf",
+                "type": "repair-intake",
+                "title": "",
+                "content": "",
+                "ctaText": "",
+                "imageHint": "",
+                "source": "system"
+              }
+            ]
+          },
+          {
+            "id": "page_forge_4",
+            "name": "Field Notes",
+            "path": "/field-notes",
+            "purpose": "",
+            "sections": [
+              {
+                "id": "section_q7jnh81",
+                "type": "details",
+                "title": "",
+                "content": "",
+                "ctaText": "",
+                "imageHint": "",
+                "source": "system"
+              }
+            ]
+          },
+          {
+            "id": "page_forge_5",
+            "name": "Support",
+            "path": "/support",
+            "purpose": "",
+            "sections": [
+              {
+                "id": "section_nlyoqgw",
+                "type": "repair-intake",
+                "title": "",
+                "content": "",
+                "ctaText": "",
+                "imageHint": "",
+                "source": "system"
+              }
+            ]
+          }
+        ]
+      },
+      "wireframe": {
+        "pages": [
+          {
+            "id": "page_forge_0",
+            "name": "Home",
+            "path": "/",
+            "purpose": "",
+            "sections": [
+              {
+                "id": "sec_home_0",
+                "type": "technical-hero",
+                "title": "Technical Hero",
+                "content": "",
+                "ctaText": "",
+                "imageHint": "",
+                "source": "manual"
+              },
+              {
+                "id": "sec_home_1",
+                "type": "product-grid",
+                "title": "Product Grid",
+                "content": "",
+                "ctaText": "",
+                "imageHint": "",
+                "source": "manual"
+              },
+              {
+                "id": "sec_home_2",
+                "type": "repair-intake",
+                "title": "Repair Intake",
+                "content": "",
+                "ctaText": "",
+                "imageHint": "",
+                "source": "manual"
+              },
+              {
+                "id": "sec_home_3",
+                "type": "field-notes",
+                "title": "Field Notes",
+                "content": "",
+                "ctaText": "",
+                "imageHint": "",
+                "source": "manual"
+              }
+            ]
+          },
+          {
+            "id": "page_forge_1",
+            "name": "Shop",
+            "path": "/shop",
+            "purpose": "",
+            "sections": [
+              {
+                "id": "section_7773n2h",
+                "type": "featured-products",
+                "title": "",
+                "content": "",
+                "ctaText": "",
+                "imageHint": "",
+                "source": "system"
+              }
+            ]
+          },
+          {
+            "id": "page_forge_2",
+            "name": "Product",
+            "path": "/product",
+            "purpose": "",
+            "sections": [
+              {
+                "id": "section_e9bz6nj",
+                "type": "product",
+                "title": "",
+                "content": "",
+                "ctaText": "",
+                "imageHint": "",
+                "source": "system"
+              }
+            ]
+          },
+          {
+            "id": "page_forge_3",
+            "name": "Repair",
+            "path": "/repair",
+            "purpose": "",
+            "sections": [
+              {
+                "id": "section_ird0rdf",
+                "type": "repair-intake",
+                "title": "",
+                "content": "",
+                "ctaText": "",
+                "imageHint": "",
+                "source": "system"
+              }
+            ]
+          },
+          {
+            "id": "page_forge_4",
+            "name": "Field Notes",
+            "path": "/field-notes",
+            "purpose": "",
+            "sections": [
+              {
+                "id": "section_q7jnh81",
+                "type": "details",
+                "title": "",
+                "content": "",
+                "ctaText": "",
+                "imageHint": "",
+                "source": "system"
+              }
+            ]
+          },
+          {
+            "id": "page_forge_5",
+            "name": "Support",
+            "path": "/support",
+            "purpose": "",
+            "sections": [
+              {
+                "id": "section_nlyoqgw",
+                "type": "repair-intake",
+                "title": "",
+                "content": "",
+                "ctaText": "",
+                "imageHint": "",
+                "source": "system"
+              }
+            ]
+          }
+        ]
+      },
+      "answerSheet": {
+        "version": "1.0.0",
+        "source": "site-plan",
+        "status": "draft",
+        "business": {
+          "name": "Summit Forge Outfitters",
+          "industry": "Outdoor gear retail",
+          "location": "",
+          "description": "Summit Forge Outfitters sells durable outdoor gear and provides field repair services for hikers and trail runners across Papua New Guinea.",
+          "targetAudience": "Hikers and trail runners",
+          "offer": "Durable jackets, boots, and a repair service",
+          "uniqueSellingPoint": "",
+          "goals": ""
+        },
+        "brand": {
+          "tone": "rugged, trustworthy",
+          "colors": "forest green, slate",
+          "stylePreferences": ""
+        },
+        "pages": [
+          {
+            "id": "page_forge_0",
+            "name": "Home",
+            "path": "/",
+            "purpose": "",
+            "sections": [
+              {
+                "id": "sec_home_0",
+                "type": "technical-hero",
+                "title": "Technical Hero",
+                "content": "",
+                "ctaText": "",
+                "imageHint": "",
+                "source": "manual"
+              },
+              {
+                "id": "sec_home_1",
+                "type": "product-grid",
+                "title": "Product Grid",
+                "content": "",
+                "ctaText": "",
+                "imageHint": "",
+                "source": "manual"
+              },
+              {
+                "id": "sec_home_2",
+                "type": "repair-intake",
+                "title": "Repair Intake",
+                "content": "",
+                "ctaText": "",
+                "imageHint": "",
+                "source": "manual"
+              },
+              {
+                "id": "sec_home_3",
+                "type": "field-notes",
+                "title": "Field Notes",
+                "content": "",
+                "ctaText": "",
+                "imageHint": "",
+                "source": "manual"
+              }
+            ]
+          },
+          {
+            "id": "page_forge_1",
+            "name": "Shop",
+            "path": "/shop",
+            "purpose": "",
+            "sections": [
+              {
+                "id": "section_7773n2h",
+                "type": "featured-products",
+                "title": "",
+                "content": "",
+                "ctaText": "",
+                "imageHint": "",
+                "source": "system"
+              }
+            ]
+          },
+          {
+            "id": "page_forge_2",
+            "name": "Product",
+            "path": "/product",
+            "purpose": "",
+            "sections": [
+              {
+                "id": "section_e9bz6nj",
+                "type": "product",
+                "title": "",
+                "content": "",
+                "ctaText": "",
+                "imageHint": "",
+                "source": "system"
+              }
+            ]
+          },
+          {
+            "id": "page_forge_3",
+            "name": "Repair",
+            "path": "/repair",
+            "purpose": "",
+            "sections": [
+              {
+                "id": "section_ird0rdf",
+                "type": "repair-intake",
+                "title": "",
+                "content": "",
+                "ctaText": "",
+                "imageHint": "",
+                "source": "system"
+              }
+            ]
+          },
+          {
+            "id": "page_forge_4",
+            "name": "Field Notes",
+            "path": "/field-notes",
+            "purpose": "",
+            "sections": [
+              {
+                "id": "section_q7jnh81",
+                "type": "details",
+                "title": "",
+                "content": "",
+                "ctaText": "",
+                "imageHint": "",
+                "source": "system"
+              }
+            ]
+          },
+          {
+            "id": "page_forge_5",
+            "name": "Support",
+            "path": "/support",
+            "purpose": "",
+            "sections": [
+              {
+                "id": "section_nlyoqgw",
+                "type": "repair-intake",
+                "title": "",
+                "content": "",
+                "ctaText": "",
+                "imageHint": "",
+                "source": "system"
+              }
+            ]
+          }
+        ],
+        "contact": {
+          "phone": "",
+          "email": "hello@summitforge.example",
+          "whatsapp": "",
+          "address": "",
+          "socialLinks": [],
+          "primaryAction": "hello@summitforge.example"
+        },
+        "seo": {
+          "title": "",
+          "description": "",
+          "keywords": []
+        },
+        "notes": "",
+        "meta": {
+          "createdAt": "2026-06-12T17:42:33.230Z",
+          "updatedAt": "2026-06-12T17:42:33.230Z",
+          "generatedByAi": false,
+          "approvedAt": null,
+          "warnings": []
+        }
+      },
+      "heroTitle": "Technical Hero",
+      "heroSubtitle": "Summit Forge Outfitters sells durable outdoor gear and provides field repair services for hikers and trail runners across Papua New Guinea.",
+      "heroCta": "hello@summitforge.example",
+      "aboutTitle": "About Summit Forge Outfitters",
+      "aboutText": "Summit Forge Outfitters sells durable outdoor gear and provides field repair services for hikers and trail runners across Papua New Guinea.",
+      "servicesTitle": "Product Grid",
+      "servicesText": "Durable jackets, boots, and a repair service",
+      "contactTitle": "Repair Intake",
+      "contactText": "hello@summitforge.example",
+      "userId": "john-wesly-owner",
+      "siteName": "Summit Forge Outfitters",
+      "slug": "summit-forge-outfitters",
+      "templateId": "forge"
+    },
+    "brief": {
+      "businessName": "Summit Forge Outfitters",
+      "industry": "Outdoor gear retail",
+      "targetAudience": "Hikers and trail runners",
+      "offer": "Durable jackets, boots, and a repair service",
+      "brandTone": "rugged, trustworthy",
+      "colors": "forest green, slate",
+      "stylePreferences": "",
+      "contact": "hello@summitforge.example",
+      "domainPreference": "",
+      "notes": ""
+    },
+    "sitemap": {
+      "pages": [
+        {
+          "id": "page_forge_0",
+          "name": "Home",
+          "path": "/",
+          "purpose": "",
+          "sections": [
+            {
+              "id": "sec_home_0",
+              "type": "technical-hero",
+              "title": "Technical Hero",
+              "content": "",
+              "ctaText": "",
+              "imageHint": "",
+              "source": "manual"
+            },
+            {
+              "id": "sec_home_1",
+              "type": "product-grid",
+              "title": "Product Grid",
+              "content": "",
+              "ctaText": "",
+              "imageHint": "",
+              "source": "manual"
+            },
+            {
+              "id": "sec_home_2",
+              "type": "repair-intake",
+              "title": "Repair Intake",
+              "content": "",
+              "ctaText": "",
+              "imageHint": "",
+              "source": "manual"
+            },
+            {
+              "id": "sec_home_3",
+              "type": "field-notes",
+              "title": "Field Notes",
+              "content": "",
+              "ctaText": "",
+              "imageHint": "",
+              "source": "manual"
+            }
+          ]
+        },
+        {
+          "id": "page_forge_1",
+          "name": "Shop",
+          "path": "/shop",
+          "purpose": "",
+          "sections": [
+            {
+              "id": "section_7773n2h",
+              "type": "featured-products",
+              "title": "",
+              "content": "",
+              "ctaText": "",
+              "imageHint": "",
+              "source": "system"
+            }
+          ]
+        },
+        {
+          "id": "page_forge_2",
+          "name": "Product",
+          "path": "/product",
+          "purpose": "",
+          "sections": [
+            {
+              "id": "section_e9bz6nj",
+              "type": "product",
+              "title": "",
+              "content": "",
+              "ctaText": "",
+              "imageHint": "",
+              "source": "system"
+            }
+          ]
+        },
+        {
+          "id": "page_forge_3",
+          "name": "Repair",
+          "path": "/repair",
+          "purpose": "",
+          "sections": [
+            {
+              "id": "section_ird0rdf",
+              "type": "repair-intake",
+              "title": "",
+              "content": "",
+              "ctaText": "",
+              "imageHint": "",
+              "source": "system"
+            }
+          ]
+        },
+        {
+          "id": "page_forge_4",
+          "name": "Field Notes",
+          "path": "/field-notes",
+          "purpose": "",
+          "sections": [
+            {
+              "id": "section_q7jnh81",
+              "type": "details",
+              "title": "",
+              "content": "",
+              "ctaText": "",
+              "imageHint": "",
+              "source": "system"
+            }
+          ]
+        },
+        {
+          "id": "page_forge_5",
+          "name": "Support",
+          "path": "/support",
+          "purpose": "",
+          "sections": [
+            {
+              "id": "section_nlyoqgw",
+              "type": "repair-intake",
+              "title": "",
+              "content": "",
+              "ctaText": "",
+              "imageHint": "",
+              "source": "system"
+            }
+          ]
+        }
+      ]
+    },
+    "wireframe": {
+      "pages": [
+        {
+          "id": "page_forge_0",
+          "name": "Home",
+          "path": "/",
+          "purpose": "",
+          "sections": [
+            {
+              "id": "sec_home_0",
+              "type": "technical-hero",
+              "title": "Technical Hero",
+              "content": "",
+              "ctaText": "",
+              "imageHint": "",
+              "source": "manual"
+            },
+            {
+              "id": "sec_home_1",
+              "type": "product-grid",
+              "title": "Product Grid",
+              "content": "",
+              "ctaText": "",
+              "imageHint": "",
+              "source": "manual"
+            },
+            {
+              "id": "sec_home_2",
+              "type": "repair-intake",
+              "title": "Repair Intake",
+              "content": "",
+              "ctaText": "",
+              "imageHint": "",
+              "source": "manual"
+            },
+            {
+              "id": "sec_home_3",
+              "type": "field-notes",
+              "title": "Field Notes",
+              "content": "",
+              "ctaText": "",
+              "imageHint": "",
+              "source": "manual"
+            }
+          ]
+        },
+        {
+          "id": "page_forge_1",
+          "name": "Shop",
+          "path": "/shop",
+          "purpose": "",
+          "sections": [
+            {
+              "id": "section_7773n2h",
+              "type": "featured-products",
+              "title": "",
+              "content": "",
+              "ctaText": "",
+              "imageHint": "",
+              "source": "system"
+            }
+          ]
+        },
+        {
+          "id": "page_forge_2",
+          "name": "Product",
+          "path": "/product",
+          "purpose": "",
+          "sections": [
+            {
+              "id": "section_e9bz6nj",
+              "type": "product",
+              "title": "",
+              "content": "",
+              "ctaText": "",
+              "imageHint": "",
+              "source": "system"
+            }
+          ]
+        },
+        {
+          "id": "page_forge_3",
+          "name": "Repair",
+          "path": "/repair",
+          "purpose": "",
+          "sections": [
+            {
+              "id": "section_ird0rdf",
+              "type": "repair-intake",
+              "title": "",
+              "content": "",
+              "ctaText": "",
+              "imageHint": "",
+              "source": "system"
+            }
+          ]
+        },
+        {
+          "id": "page_forge_4",
+          "name": "Field Notes",
+          "path": "/field-notes",
+          "purpose": "",
+          "sections": [
+            {
+              "id": "section_q7jnh81",
+              "type": "details",
+              "title": "",
+              "content": "",
+              "ctaText": "",
+              "imageHint": "",
+              "source": "system"
+            }
+          ]
+        },
+        {
+          "id": "page_forge_5",
+          "name": "Support",
+          "path": "/support",
+          "purpose": "",
+          "sections": [
+            {
+              "id": "section_nlyoqgw",
+              "type": "repair-intake",
+              "title": "",
+              "content": "",
+              "ctaText": "",
+              "imageHint": "",
+              "source": "system"
+            }
+          ]
+        }
+      ]
+    },
+    "style": null
+  },
+  "updatedAt": "2026-06-12T17:42:47.939Z"
+}
