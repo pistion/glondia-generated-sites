@@ -1,0 +1,58 @@
+{
+  "schema": "glondia.generated-template-site-scan.v1",
+  "scannedAt": "2026-06-12T17:42:47.947Z",
+  "site": {
+    "siteId": "tai_xmyja736sf9v",
+    "siteName": "Summit Forge Outfitters",
+    "slug": "summit-forge-outfitters"
+  },
+  "template": {
+    "templateId": "forge",
+    "name": "Forge",
+    "category": "Commerce",
+    "framework": "vite-react",
+    "templatePath": "templates/forge",
+    "buildCommand": "npm run build",
+    "publishDirectory": "dist"
+  },
+  "source": {
+    "directory": "C:\\Users\\dpm\\Downloads\\Glondiasites_new\\.glondia-data\\generated-sites\\tai_xmyja736sf9v",
+    "fileCount": 11,
+    "files": [
+      "glondia-site-data.json",
+      "glondia-template-copy.json",
+      "index.html",
+      "package.json",
+      "public/route-manifest.json",
+      "src/App.jsx",
+      "src/main.jsx",
+      "src/routes.js",
+      "src/siteData.js",
+      "src/styles.css",
+      "vite.config.js"
+    ],
+    "hasPackageJson": true,
+    "hasIndexHtml": true,
+    "routes": [
+      "/",
+      "/shop",
+      "/product",
+      "/repair",
+      "/field-notes",
+      "/support"
+    ],
+    "textFileCount": 11
+  },
+  "build": {
+    "framework": "vite-react",
+    "packageManager": "npm",
+    "buildCommand": "npm run build",
+    "publishDirectory": "dist"
+  },
+  "handoff": {
+    "repositoryUrl": "https://github.com/pistion/glondia-generated-sites",
+    "branch": "main",
+    "rootDirectory": "generated-template-sites/john-wesly-owner/tai-xmyja736sf9v-summit-forge-outfitters",
+    "deploymentProvider": "render"
+  }
+}
