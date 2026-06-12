@@ -1,0 +1,12 @@
+{
+  "schema": "glondia.hosting-payload-preview.v1",
+  "provider": "render",
+  "serviceType": "static_site",
+  "repoUrl": "https://github.com/pistion/glondia-generated-sites",
+  "branch": "main",
+  "rootDirectory": "generated-template-sites/john-wesly-owner/tai-xmyja736sf9v-summit-forge-outfitters",
+  "buildCommand": "npm run build",
+  "publishDirectory": "dist",
+  "framework": "vite-react",
+  "generatedAt": "2026-06-12T17:42:47.947Z"
+}
